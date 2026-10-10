@@ -1,0 +1,29 @@
+# Environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# LLM cache & local data
+.llm_cache/
+.env
+
+# Large datasets & raw files
+data/raw/
+*.parquet
+*.npy
+
+# Trained model checkpoints
+models/*
+!models/config.json
+!models/templates.json
+
+# Results & logs
+results/*.png
+results/*.csv
+*.sqlite3
+*.db
+
+# Test & coverage artifacts
+.pytest_cache/
+.coverage
