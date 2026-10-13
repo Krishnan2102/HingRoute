@@ -1,5 +1,4 @@
 import hashlib
-import itertools
 import json
 import os
 import time
@@ -14,23 +13,12 @@ load_dotenv()
 CACHE_DIR = os.getenv("LLM_CACHE_DIR", ".llm_cache")
 cache = Cache(CACHE_DIR)
 
-# 1. Initialize a pool of clients from all available keys
-_clients = []
-for i in range(1, 10):  # Check GROQ_API_KEY_1 through GROQ_API_KEY_9
-    key = os.getenv(f"GROQ_API_KEY_{i}")
-    if key and key.strip():
-        _clients.append(Groq(api_key=key.strip()))
+# Initialize a single Groq client
+api_key = os.getenv("GROQ_API_KEY")
+if not api_key or not api_key.strip():
+    raise ValueError("Missing GROQ_API_KEY in environment variables.")
 
-if not _clients:
-    # Fallback to single GROQ_API_KEY if present
-    single_key = os.getenv("GROQ_API_KEY")
-    if single_key and single_key.strip():
-        _clients.append(Groq(api_key=single_key.strip()))
-    else:
-        raise ValueError("No GROQ_API_KEY or GROQ_API_KEY_X environment variables found.")
-
-# 2. Infinite round-robin iterator across API keys
-_client_cycle = itertools.cycle(_clients)
+client = Groq(api_key=api_key.strip())
 
 
 def get_cache_key(model: str, prompt: str, **kwargs: Any) -> str:
@@ -50,14 +38,14 @@ def cached_call(
     """Cached LLM wrapper with exponential backoff on retryable errors."""
     key = get_cache_key(model, prompt, **kwargs)
 
-    # Cache hit
+    # 1. Check cache first
     if key in cache:
         return cache[key]
 
+    # 2. Cache miss -> retry loop
     delay = initial_delay
     last_exception = None
 
-    # Cache miss -> retry loop
     for attempt in range(max_retries):
         try:
             response_text = call_fn(model=model, prompt=prompt, **kwargs)
@@ -73,16 +61,14 @@ def cached_call(
 
 
 def _call_groq(model: str, prompt: str, **kwargs: Any) -> str:
-    """Fetch next client in rotation and invoke Groq Chat Completions."""
-    client = next(_client_cycle)
-
+    """Execute Chat Completion using the single Groq client."""
     temperature = kwargs.pop("temperature", 0.7)
 
     completion = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}],
         temperature=temperature,
-        **kwargs,  # Forwards remaining kwargs like response_format, max_tokens, etc.
+        **kwargs,  # Forwards extra arguments (e.g. response_format, max_tokens)
     )
     return completion.choices[0].message.content or ""
 
@@ -92,5 +78,5 @@ def cached_generate(
     model: str = "openai/gpt-oss-20b",
     **kwargs: Any,
 ) -> str:
-    """Cached generation entry point defaulting to openai/gpt-oss-20b."""
+    """Cached generation entry point using a single client."""
     return cached_call(model=model, prompt=prompt, call_fn=_call_groq, **kwargs)
