@@ -5907,6 +5907,9 @@ id,orig_id,text,label,style,split
 2017_0,2017,Maine ek item kharida aur exchange rate galat tha.,other,casual,train
 2017_1,2017,mne ek itm khrd aur exchnge rt galat tha.,other,noisy,train
 2017_2,2017,I purchased an item and the exchange rate was galat.,other,mixed,train
+2018_0,2018,Cheque se top up kaise karoon?,other,casual,train
+2018_1,2018,cheq se top up kaise krn?,other,noisy,train
+2018_2,2018,How do I top up using a cheque? (Cheque se kaise add karun?),other,mixed,train
 2019_0,2019,Mujhe credit card ka brand choose karna padega?,other,casual,train
 2019_1,2019,kya mujhe crd crt brnd choose krna hoga?,other,noisy,train
 2019_2,2019,"Do I have to pick a credit card brand, bhai?",other,mixed,train
@@ -6262,3 +6265,164 @@ id,orig_id,text,label,style,split
 2139_0,2139,"Hey, kya main apna PIN change kar sakta hoon?",other,casual,val
 2139_1,2139,hey kya mn apn PIN chnge kr skta hoon?,other,noisy,val
 2139_2,2139,"Can I change my PIN, kripya?",other,mixed,val
+2140_0,2140,"Mujhe soon ek naya card chahiye, order kaise karun?",other,casual,train
+2140_1,2140,"Mjh sn ek ny card chhie, ord kaise krn?",other,noisy,train
+2140_2,2140,"I need a new card soon, how do I order it? Process kya hai?",other,mixed,train
+2141_0,2141,Transfer abhi pending kyun hai? Kya main kuch kar sakta hoon?,other,casual,train
+2141_1,2141,Trnsfr abhi pending kyun h? Kya main kuch kar sakt ho?,other,noisy,train
+2141_2,2141,"Why is the transfer still pending? Can I do something? Transfer abhi pending hai, kya main kuch kar sakta hoon?",other,mixed,train
+2142_0,2142,App ne mera top up revert kar diya.,other,casual,train
+2142_1,2142,app ne mera topup revrt kar diya,other,noisy,train
+2142_2,2142,"The app has reverted my top-up, kripya madad karo.",other,mixed,train
+2143_0,2143,Maine cash deposit kiya aur balance update nahi hua.,other,casual,train
+2143_1,2143,Mne cash deposite kiya aur balnc updte nhi hua.,other,noisy,train
+2143_2,2143,"I deposited cash, but my balance abhi updated nahi hua.",other,mixed,train
+2144_0,2144,Mere virtual card kaam nahi kar raha hai.,other,casual,train
+2144_1,2144,Mre vrtrl card kaam nhi kar rahe h?,other,noisy,train
+2144_2,2144,"I can't seem to get my virtual card to work, yaar.",other,mixed,train
+2145_0,2145,Transfers ke liye koi charge hai kya?,other,casual,train
+2145_1,2145,Trnsfrs ke liye koi chrge hai kyaa?,other,noisy,train
+2145_2,2145,"Is there a charge for transfers, koi fee?",other,mixed,train
+2146_0,2146,"Maine apna bill of fare activate karne ki koshish ki, par kaam nahi kiya.",other,casual,train
+2146_1,2146,Mn trv actvng my bill f fare nd it ndidn't wrk.,other,noisy,train
+2146_2,2146,I tried activating my bill of fare but it didn't kaam.,other,mixed,train
+2147_0,2147,Mujhe apni nayi card link karne mein help chahiye.,other,casual,train
+2147_1,2147,Mujh nayi card link krne me help chahiye,other,noisy,train
+2147_2,2147,"I need help to link my new card, kripya madad kare.",other,mixed,train
+2148_0,2148,Card ko kahaan bhejna hai?,other,casual,train
+2148_1,2148,Card k hn bhejn hn?,other,noisy,train
+2148_2,2148,"Where do we mail the card, bhai?",other,mixed,train
+2149_0,2149,Top-up card ka verification kaise karein?,other,casual,train
+2149_1,2149,Tp-up crd ka verify kaise ho?,other,noisy,train
+2149_2,2149,"How can I verify my top-up card, kripya batao?",other,mixed,train
+2150_0,2150,"ATM se jo exchange rate mila, woh bilkul galat tha.",other,casual,train
+2150_1,2150,"ATM se jo excahnge rate mila, woh bilkul gllt tha.",other,noisy,train
+2150_2,2150,"The exchange rate at the ATM was completely wrong, yeh bilkul galat tha.",other,mixed,train
+2151_0,2151,Mere beneficiary ko access kyun nahi mil raha?,other,casual,test
+2151_1,2151,mre benfcy ko accss kyun n h mil rha?,other,noisy,test
+2151_2,2151,Why can't my beneficiary get access? (beneficiary ko access nahi mil raha hai).,other,mixed,test
+2152_0,2152,"Transfer mere account me allowed nahi hua, kya karun?",other,casual,test
+2152_1,2152,Trfr my acct wuz nltld.,other,noisy,test
+2152_2,2152,"The transfer to my account was not allowed, kripya madad karein.",other,mixed,test
+2153_0,2153,"Hey, kya ho raha hai mere cash withdrawal ke saath? Exchange rate wrong lag raha hai.",other,casual,val
+2153_1,2153,"Hey, kya ho rha h mra cash wthdrwl ke sath? Exch rte galat lag rha h.",other,noisy,val
+2153_2,2153,"What is going on with my cash withdrawal? The exchange rate is wrong, bhai.",other,mixed,val
+2154_0,2154,"Arre, cash withdrawal pe fee kyun laga?",other,casual,val
+2154_1,2154,Arre cash wldrwl pe fee kyun aayi?,other,noisy,val
+2154_2,2154,"Why was there a fee on my cash withdrawal, bhai?",other,mixed,val
+2155_0,2155,Mera virtual card kyun kaam nahi kar raha?,other,casual,train
+2155_1,2155,Vrtrl crd kyun kaam nhi kr rha?,other,noisy,train
+2155_2,2155,Why can't my virtual card kaam kare?,other,mixed,train
+2156_0,2156,Koi ne mera card access kiya? App pe kuch payments dikh rahe hain jo maine nahi kiye.,other,casual,train
+2156_1,2156,Koi ne mera card accss kiya? App pe kuch paymnts dikh rahe hain jo maine nhi kiye.,other,noisy,train
+2156_2,2156,"Has someone accessed my card? There are payments on the app that I didn't make, kaun is doing this?",other,mixed,train
+2157_0,2157,Mere top up abhi tak process kyun nahi hua?,other,casual,val
+2157_1,2157,Tp up abhi tak prcs kyun nhi hua?,other,noisy,val
+2157_2,2157,"Why hasn't my top up gone through yet, yaar?",other,mixed,val
+2158_0,2158,Kya mujhe manually top up karna padega jab balance low ho jaye?,other,casual,test
+2158_1,2158,kya mujhe manuall top up krna padega jab balnc low ho jaye?,other,noisy,test
+2158_2,2158,"Do I have to manually top up when my balance is low, kya?",other,mixed,test
+2159_0,2159,"Aaj subah contactless se payment nahi hua, accept nahi hua.",other,casual,train
+2159_1,2159,"Aj sbh cnctless se pmt n h, accpt n h.",other,noisy,train
+2159_2,2159,"I couldn't use my contactless this morning, it wasn't accepted, bhai.",other,mixed,train
+2160_0,2160,"Batao, top-up verify karne ka process kya hai?",other,casual,train
+2160_1,2160,"Btao, tp-up vrfy karne ka process kya h?",other,noisy,train
+2160_2,2160,Can you explain how to verify a top-up? Kya process hai?,other,mixed,train
+2161_0,2161,Paisa account me kitna time lagega?,other,casual,val
+2161_1,2161,Psa acc me ktn tm lgg?,other,noisy,val
+2161_2,2161,"How long will it take for the money to appear in my account, bhai?",other,mixed,val
+2162_0,2162,"Bhai, Google Pay top-up ka kaam kyun nahi ho raha? Explain please.",other,casual,train
+2162_1,2162,"Bhai, Ggl Pay tpup ka kaam kyun n h rha? Plz explain.",other,noisy,train
+2162_2,2162,Can you explain why my Google Pay Top-up is not working? Please batao.,other,mixed,train
+2163_0,2163,Mujhe apni identity verify karne mein help chahiye.,other,casual,test
+2163_1,2163,Muj apni idnty vryfy mr hlp chhye.,other,noisy,test
+2163_2,2163,"I need help verifying my identity, please madad karein.",other,mixed,test
+2164_0,2164,Mujhe pata karna hai ki funds ka source kya hai.,other,casual,val
+2164_1,2164,Mjh pta karna h ki fnds ka src kyaa h?,other,noisy,val
+2164_2,2164,"I want to know where the funds come from, please batao.",other,mixed,val
+2165_0,2165,"Hey, main UK account se kuch ghante pehle transfer kiya tha, abhi tak dekh nahi raha. Check kar de.",other,casual,train
+2165_1,2165,"hey, mn UK acc se kuch ghnt phele trnsfr kiya tha, abhi tak dekh nhi rha. pls chk kar de",other,noisy,train
+2165_2,2165,"I made a transfer a few hours ago from my UK account, but I can't see it yet. कृपया check this for me.",other,mixed,train
+2166_0,2166,"Mujhe app use nahi ho rahi, mera phone hotel mein kho gaya hai.",other,casual,train
+2166_1,2166,"Mujh app use nhi ho rha, mera phn lo hotel me kho gya.",other,noisy,train
+2166_2,2166,"I can't use the app, mera phone hotel mein kho gaya hai.",other,mixed,train
+2167_0,2167,Ek aur card ka request kahan se karoon?,other,casual,val
+2167_1,2167,Ek aur card ka req kahan se krn?,other,noisy,val
+2168_0,2168,"Maine cash withdrawal kiya aur galat fee charge ho rahi hai, help karo please.",other,casual,test
+2168_1,2168,"Mn csh wdrl nd wchrgd f wrng, plz hlp.",other,noisy,test
+2168_2,2168,"I made a cash withdrawal and was charged an incorrect fee, can you please help? कृपया सहायता करें.",other,mixed,test
+2169_0,2169,Main kaunse currency mein paise rakh sakta hoon?,other,casual,test
+2169_1,2169,Mn kns curncy m paise rkh skt hoon?,other,noisy,test
+2169_2,2169,What kind of currency can I hold paise in?,other,mixed,test
+2170_0,2170,Abhi tak mere transfer ka paisa nahi aaya.,other,casual,val
+2170_1,2170,Abhi tk mri tranfr ka paise nhi aaya.,other,noisy,val
+2170_2,2170,"I haven't received the money I transferred yet, please check, dhanyavaad.",other,mixed,val
+2172_0,2172,Withdrawal abhi pending kyon hai?,other,casual,train
+2172_1,2172,Wht is my wt stll pending?,other,noisy,train
+2172_2,2172,"Why is my withdrawal still pending, bhai?",other,mixed,train
+2173_0,2173,"Jab maine card se top up kiya, pura paisa gayab ho gaya.",other,casual,val
+2173_1,2173,"Jb mn crd se tp up ki, pwr psh gya.",other,noisy,val
+2173_2,2173,"I tried to top up with my card, but all the paisa disappeared.",other,mixed,val
+2174_0,2174,Mujhe cheque se pay karna hai.,other,casual,val
+2174_1,2174,mjh chk se pay krna h,other,noisy,val
+2174_2,2174,"I want to use a cheque to pay, kripya.",other,mixed,val
+2175_0,2175,"Hey, card ko sabse jaldi kab milega?",other,casual,train
+2175_1,2175,Crd ko sbse jaldi kab mlg?,other,noisy,train
+2175_2,2175,When will I get my card? Card kab milega?,other,mixed,train
+2176_0,2176,"Mujhe disposable virtual card banana hai, kaise karein?",other,casual,train
+2176_1,2176,"Mujh disposable vrcl bnana h, kaise karein?",other,noisy,train
+2176_2,2176,I want to create a disposable virtual card. How do I go about doing that? मदद करें.,other,mixed,train
+2177_0,2177,"Maine jo cash withdrawal ki maang ki thi, uska amount match nahi ho raha jab maine exchange kiya.",other,casual,train
+2177_1,2177,"Mn jtn cash wldrw ki thi, uska amnt mcht nhi rha whn mn exchnj ki.",other,noisy,train
+2177_2,2177,"The amount of cash I requested to withdraw didn't match what I received when exchanged, bhai.",other,mixed,train
+2178_0,2178,"ATM se cash withdraw karne ki koshish ki, par kaam nahi hua. Batao yeh kyon ho raha hai?",other,casual,test
+2178_1,2178,"atm se cash nikalne ki kshish ki, par kaam nhi hua. Bta kyun?",other,noisy,test
+2178_2,2178,I tried to withdraw cash from the ATM but it didn't work. Kya aap bata sakte hain ki yeh kyon ho raha hai?,other,mixed,test
+2179_0,2179,Mujhe lagta hai ki maine apna smartphone hotel mein chhod diya tha jahan main stay kiya tha.,other,casual,test
+2179_1,2179,Mujh lagta h ki main apna smrtphn hotel m chhd diya tha jahan main st kiya tha.,other,noisy,test
+2179_2,2179,I think I left my smartphone at the hotel jahan main stay kar raha tha.,other,mixed,test
+2180_0,2180,"Maine kuch kharida aur already mila, paisa ab tak nikal nahi gaya?",other,casual,train
+2180_1,2180,"Mne kuch kharid aur alredy mila, paisa ab tak nkal nhi gya?",other,noisy,train
+2180_2,2180,"I bought something and already received it, but why hasn't the paisa been deducted?",other,mixed,train
+2181_0,2181,"Hey, kaise main AUD GBP mein convert karun?",other,casual,train
+2181_1,2181,hw d i chnge my AUD n GBP?,other,noisy,train
+2181_2,2181,"I want to change my AUD to GBP, kripya guide karein.",other,mixed,train
+2182_0,2182,Mere card se kaun kaun desh mein payment kar sakta hu?,other,casual,train
+2182_1,2182,ky card use khn kn kar skta hu?,other,noisy,train
+2182_2,2182,"Which countries can I use my card in, yaar?",other,mixed,train
+2183_0,2183,"Ordered thodi der pehle, US me delivery ka ETA kya hai?",other,casual,train
+2183_1,2183,"ordrd thodi der phele, US me dly ka ETA kya hai?",other,noisy,train
+2183_2,2183,"I ordered a while back, what's the ETA in the US? (delivery ka time kya hai?)",other,mixed,train
+2184_0,2184,"Bas kuch seconds me hi kar sakte ho. Account pe jao, activate button dabao, aur wahan jo directions diye gaye hain unko follow karo.",other,casual,train
+2184_1,2184,"Bsk shns me hi kr skte ho. Accnt pe jao, actvt button dbao, aur whn jo dtrns diye gye hn unko flw kr.",other,noisy,train
+2184_2,2184,"You can do that in just a few seconds. Go to account, hit activate bhi, and follow the directions from there.",other,mixed,train
+2185_0,2185,"Bhai, kitni currencies hold kar sakta hu?",other,casual,train
+2185_1,2185,"Bhai, ktni crncy hold kr sakta hu?",other,noisy,train
+2185_2,2185,"Can you tell me how many currencies I can hold, bhai?",other,mixed,train
+2186_0,2186,Mujhe card ka PIN kahan milta hai?,other,casual,train
+2186_1,2186,Mjh ka card ka PIN kahan milta h?,other,noisy,train
+2186_2,2186,Where can I find my card ka PIN?,other,mixed,train
+2187_0,2187,"Maine apna card receive kar liya, app mein kaise add karun?",other,casual,train
+2187_1,2187,"Mn card recd li, app mein kaise add karun?",other,noisy,train
+2187_2,2187,"I have received my card, can you help me put it in the app? Kripya add kar dein.",other,mixed,train
+2188_0,2188,American Express se paisa add karne me help karo.,other,casual,train
+2188_1,2188,AmEx se paise add krne me help kr.,other,noisy,train
+2188_2,2188,"Please help me use American Express to add money to the account, shukriya.",other,mixed,train
+2189_0,2189,"ATM se pehle hi withdraw kiya tha, app mein jo amount dikh raha hai, woh mere paise se zyada hai.",other,casual,val
+2189_1,2189,"ATM se wd kiya tha, app me jo amt dkh raha hai, woh mere paise se zyda hai.",other,noisy,val
+2189_2,2189,"I did a withdrawal earlier at an ATM. The amount showing in the app is more than I got, bhai.",other,mixed,val
+2190_0,2190,"Maine beneficiary ko paisa transfer karne ki koshish ki, lekin reject ho gaya. Kya bata sakte ho kyun?",other,casual,train
+2190_1,2190,Mn trd trfr fnd t bnfclr nd w s dn. Cn u tll m y?,other,noisy,train
+2190_2,2190,I tried to transfer funds to a beneficiary and it was denied. Can you bata why?,other,mixed,train
+2191_0,2191,Help! I forgot my app passcode!,other,casual,train
+2191_1,2191,Hlp! I fgt my app psscd!,other,noisy,train
+2191_2,2191,"Help! I've forgotten my app passcode, bhai.",other,mixed,train
+2192_0,2192,Kya aap meri top-ups limit karte ho?,other,casual,train
+2192_1,2192,Ky aap mri top ups lmt krte ho?,other,noisy,train
+2192_2,2192,"Do you limit my top-ups, koi limit hai?",other,mixed,train
+2193_0,2193,"Mujhe help chahiye. Maine ek merchant se refund mangwaya tha thodi der pehle, par abhi tak paise wapas nahi aaye. Account baar baar check kar raha hoon, koi update nahi dikh raha. Ab kya karun?",other,casual,train
+2193_1,2193,"Mujh help chahiye. Mn ek mrcnt se rfund mngwa tha thodi d r pehle, pr abhi tk paise wapas nhi aaye. Accnt baar baar chk kar raha hoon, koi updte nhi dikh raha. Ab kya karun?",other,noisy,train
+2193_2,2193,"I need help. I asked for a refund from a merchant a while ago, but I have not gotten my money back. I keep checking my account, but nothing is showing up. Kya karna chahiye ab?",other,mixed,train
+2194_0,2194,"Mujhe fiat currencies ko hold aur exchange karni hai, iske liye main kya use kar sakta hoon?",other,casual,train
+2194_1,2194,"Mujh ke fiat curcys hold ar exchng karna h, iske liye main kya use kar sakta hoon?",other,noisy,train
+2194_2,2194,"I want to hold and exchange fiat currencies, iske liye main kya use kar sakta hoon?",other,mixed,train
