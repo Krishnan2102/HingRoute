@@ -61,7 +61,7 @@ def plot_confusion_matrix(
             color="white" if val>(cm.max()/2.0) else "black"
             ax.text(j,i,str(val),ha="center",va="center",color=color,fontsize=8)
 
-    ax.set_x_label("Predicted Label",fontweight="bold",labelpad=10)
+    ax.set_xlabel("Predicted Label",fontweight="bold",labelpad=10)
     ax.set_ylabel("True Label",fontweight="bold")
     ax.set_title(title,pad=20,fontweight="bold")
     plt.tight_layout()
