@@ -91,21 +91,35 @@ def run_tfidf_baseline(train_df:pd.DataFrame,test_df:pd.DataFrame)->Dict[str,Any
     metrics["cost_per_1k"]=0.0
     return metrics
 #4. Run cached Zero-Shot LLM on test -> evaluate on test.
+PRED_CHECKPOINT_FILE = "results/zeroshot_predictions.csv"
+
+
 def run_zero_shot_baseline(
     test_df: pd.DataFrame,
     model_name: str = "openai/gpt-oss-20b",
-    max_eval_samples: int = 50,  # Cap evaluation sample size to prevent quota hang
 ) -> Dict[str, Any]:
     print(f"\n--- Running Baseline 2: Zero-Shot LLM ({model_name}) ---")
+    os.makedirs("results", exist_ok=True)
     valid_intents = set(test_df["label"].unique())
-    preds = []
 
-    eval_slice = test_df.head(max_eval_samples) if max_eval_samples else test_df
-    total = len(eval_slice)
-    print(f"Evaluating {total} samples on {model_name}...")
+    # 1. Load previously completed predictions if checkpoint exists
+    completed_ids = set()
+    if os.path.exists(PRED_CHECKPOINT_FILE):
+        existing_df = pd.read_csv(PRED_CHECKPOINT_FILE, dtype={"id": str})
+        completed_ids = set(existing_df["id"].dropna().tolist())
 
+    total_samples = len(test_df)
+    print(f"Resuming Zero-Shot: {len(completed_ids)}/{total_samples} already evaluated.")
+
+    # 2. Iterate and log progress
     start_time = time.perf_counter()
-    for idx, (_, row) in enumerate(eval_slice.iterrows()):
+    newly_processed = 0
+
+    for idx, (_, row) in enumerate(test_df.iterrows(), 1):
+        row_id = str(row.get("id", idx))
+        if row_id in completed_ids:
+            continue
+
         prompt = ZERO_SHOT_PROMPT_TEMPLATE.format(text=row["text"])
         try:
             raw_resp = cached_generate(model=model_name, prompt=prompt, temperature=0.0)
@@ -114,22 +128,44 @@ def run_zero_shot_baseline(
             pred_intent = data.get("intent", "other")
             if pred_intent not in valid_intents:
                 pred_intent = "other"
-        except Exception as e:
+        except Exception:
             pred_intent = "other"
 
-        preds.append(pred_intent)
+        # Append immediately to checkpoint file
+        record_df = pd.DataFrame([{
+            "id": row_id,
+            "text": row["text"],
+            "true_label": row["label"],
+            "pred_label": pred_intent
+        }])
+        write_header = not os.path.exists(PRED_CHECKPOINT_FILE)
+        record_df.to_csv(PRED_CHECKPOINT_FILE, mode="a", header=write_header, index=False)
+        completed_ids.add(row_id)
+        newly_processed += 1
 
-        if (idx + 1) % 10 == 0 or (idx + 1) == total:
-            print(f"Zero-shot progress: {idx + 1}/{total} evaluated...")
+        # Real-time progress logger
+        pct = (len(completed_ids) / total_samples) * 100
+        print(f"[{len(completed_ids)}/{total_samples}] ({pct:.1f}%) | ID: {row_id} -> {pred_intent}")
 
-    elapsed_ms = (time.perf_counter() - start_time) * 1000.0 / total
+    elapsed_total = time.perf_counter() - start_time
+    avg_latency = (elapsed_total * 1000.0 / newly_processed) if newly_processed > 0 else 0.0
+
+    # 3. Read complete checkpoint to compute metrics
+    full_preds_df = pd.read_csv(PRED_CHECKPOINT_FILE, dtype={"id": str})
+    
+    # Ensure order aligns with test_df if computing metrics
+    merged = test_df[["id", "label"]].astype(str).merge(
+        full_preds_df[["id", "pred_label"]].astype(str),
+        on="id",
+        how="inner"
+    )
 
     metrics = evaluate_predictions(
-        y_true=eval_slice["label"],
-        y_pred=preds,
-        output_prefix="results/baseline_zeroshot",
+        y_true=merged["label"],
+        y_pred=merged["pred_label"],
+        output_prefix="results/baseline_zeroshot"
     )
-    metrics["latency_ms_per_query"] = elapsed_ms
+    metrics["latency_ms_per_query"] = avg_latency
     metrics["cost_per_1k"] = 0.02
     return metrics
 #5. Record macro-F1, accuracy, latency per query, and estimated cost per 1,000 queries.
