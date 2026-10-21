@@ -38,7 +38,6 @@ id,orig_id,text,label,style,split
 115_0,115,"Hey, aapne jo card bheja tha uska tracking number milega?",card_arrival,casual,test
 115_1,115,"Hey, apne jo card bheja tha uska trckng nmbre milega?",card_arrival,noisy,test
 115_2,115,Do you have a tracking number for the card I was sent? (card ka tracking number?),card_arrival,mixed,test
-122_0,122,Mujhe abhi tak card nahi mila.,card_arrival,casual,test
 122_1,122,mjh abhi tak card nhi mila,card_arrival,noisy,test
 122_2,122,"I haven't got my card yet, bhai.",card_arrival,mixed,test
 125_0,125,New card kitne din mein aayega?,card_arrival,casual,test
@@ -146,10 +145,8 @@ id,orig_id,text,label,style,split
 333_0,333,"Mera card kaam nahi kar raha, main kya karun?",card_not_working,casual,test
 333_1,333,"Mre card kam nhi kr raha, k rna chahi?",card_not_working,noisy,test
 333_2,333,What should I do if my card doesn't work? Main kya karu?,card_not_working,mixed,test
-334_0,334,Mera card kaam kyun nahi kar raha?,card_not_working,casual,test
 334_1,334,Yw m card kyun n wkr,card_not_working,noisy,test
 334_2,334,"Why won't my card kaam kar raha, yaar?",card_not_working,mixed,test
-335_0,335,Mera card kaam nahi kar raha hai.,card_not_working,casual,test
 335_1,335,Mra crd kaam nkr rha h.,card_not_working,noisy,test
 335_2,335,"My card will not work, kripya fix karein.",card_not_working,mixed,test
 337_0,337,Card ki validity kitni hoti hai?,card_not_working,casual,test
@@ -221,7 +218,6 @@ id,orig_id,text,label,style,split
 547_0,547,"Arre bhai, maine galti se galat account me paisa transfer kar diya! Ek digit galat dala. Please yeh transaction cancel kar do.",cancel_transfer,casual,test
 547_1,547,"Arre bhai, maine galti se galat accnt me paisa transfr kar diya! Ek digit galat dala. Plz yeh transfr cancel kr do.",cancel_transfer,noisy,test
 547_2,547,"I made a huge mistake! I transferred money to the wrong account by accident. I entered one of the digits wrong. Please cancel this transaction immediately, bhai.",cancel_transfer,mixed,test
-562_0,562,Transfer cancel karna hai.,cancel_transfer,casual,test
 562_1,562,Trnsfr cncl krna h,cancel_transfer,noisy,test
 562_2,562,"I need to cancel a transfer, kripya.",cancel_transfer,mixed,test
 565_0,565,Help! Mujhe transaction cancel karna hai.,cancel_transfer,casual,test
@@ -251,7 +247,6 @@ id,orig_id,text,label,style,split
 615_0,615,"Hey, help urgently please. I realized I sent payment to wrong account number, typo! Please cancel it immediately, I can't do it from the app.",cancel_transfer,casual,test
 615_1,615,"Hey i nedd hp urgntly. i jus rlz I snd my pmnt to wron acc no, ther's a tpy! pls cncl it immdtly, i cant do it anymore fr the app.",cancel_transfer,noisy,test
 615_2,615,"Hey, I need help urgently. I just realized I sent my payment to the wrong account number, there's a typo! कृपया इसे तुरंत cancel करें, I can't do it anymore from the app.",cancel_transfer,mixed,test
-629_0,629,Transfer cancel karna chahta hoon,cancel_transfer,casual,test
 629_1,629,Mujh trnsfr cncl krna h,cancel_transfer,noisy,test
 629_2,629,"I would like to cancel a transfer, kripya.",cancel_transfer,mixed,test
 642_0,642,"Maine jo transfer kiya hai, kya usko cancel kar sakta hoon?",cancel_transfer,casual,test
@@ -378,7 +373,6 @@ id,orig_id,text,label,style,split
 941_2,941,"I put in a payment a while ago and it still shows as pending. How long does it take to clear, bhai?",pending_card_payment,mixed,test
 952_0,952,Mere card ka payment abhi tak pending kyun hai?,pending_card_payment,casual,test
 952_1,952,Mer card paymnt pending kyun h?,pending_card_payment,noisy,test
-952_2,952,"Why is my card payment still pending, bhai?",pending_card_payment,mixed,test
 958_0,958,Mera card ka payment pending kyon hai?,pending_card_payment,casual,test
 958_1,958,mre card pmt stll pndng kyun?,pending_card_payment,noisy,test
 958_2,958,"Why is my card payment still pending, yaar?",pending_card_payment,mixed,test
@@ -402,7 +396,6 @@ id,orig_id,text,label,style,split
 1005_2,1005,"My purchase from this morning still is pending, bhai.",pending_card_payment,mixed,test
 1006_0,1006,"Bhai, mera card payment abhi bhi pending kyun hai?",pending_card_payment,casual,test
 1006_1,1006,"br, mera card paymnt abhi bhi pending kyun h?",pending_card_payment,noisy,test
-1006_2,1006,"Why is my card payment still pending, bhai?",pending_card_payment,mixed,test
 1008_0,1008,Mujhe pending transaction ka matlab samajh nahi aa raha.,pending_card_payment,casual,test
 1008_1,1008,Mjh pending txn ka mtlb kya h?,pending_card_payment,noisy,test
 1008_2,1008,"I don't know what pending transaction means, kripya explain karo.",pending_card_payment,mixed,test
@@ -418,12 +411,10 @@ id,orig_id,text,label,style,split
 1029_0,1029,"Mujhe aaj subah kuch items mil gaye, par payment pending dikh raha hai.",pending_card_payment,casual,test
 1029_1,1029,I gt sm items ths mornng bt th pmt s pndng,pending_card_payment,noisy,test
 1029_2,1029,"I got some items this morning but the payment says pending, bhai.",pending_card_payment,mixed,test
-1034_0,1034,Mere paas ek payment hai jo abhi tak process nahi hua.,pending_card_payment,casual,test
 1034_1,1034,Mer pa ek pmt hai jo abhi tak prcs n h.,pending_card_payment,noisy,test
 1034_2,1034,"I have a payment that hasn't gone through yet, yaar.",pending_card_payment,mixed,test
 1041_0,1041,"Arre, 'payment pending' ka kya matlab hai?",pending_card_payment,casual,test
 1041_1,1041,"Arre, 'paymnt pending' ka kya mtlb h?",pending_card_payment,noisy,test
-1041_2,1041,"What does it mean when it says I have a payment pending, bhai?",pending_card_payment,mixed,test
 1044_0,1044,"Subah kuch kharida, payment pending dikh raha hai.",pending_card_payment,casual,test
 1044_1,1044,"Subh kuch kharid li, pmt pending dkh rha h.",pending_card_payment,noisy,test
 1044_2,1044,"I bought some things in the morning but the payment shows as pending, yaar.",pending_card_payment,mixed,test
@@ -460,7 +451,6 @@ id,orig_id,text,label,style,split
 1101_0,1101,Mera payment accept kyun nahi hua?,declined_card_payment,casual,test
 1101_1,1101,Mera paymnt accpt kyun nhi h?,declined_card_payment,noisy,test
 1101_2,1101,Why was my payment not accepted? Kya reason hai?,declined_card_payment,mixed,test
-1111_0,1111,Mera card reject ho gaya,declined_card_payment,casual,test
 1111_1,1111,Mera card rejct gya,declined_card_payment,noisy,test
 1111_2,1111,My card was reject ho gaya,declined_card_payment,mixed,test
 1112_0,1112,"I use this card all the time, so why did it get declined at the shop today?",declined_card_payment,casual,test
@@ -550,7 +540,6 @@ id,orig_id,text,label,style,split
 1344_0,1344,Yeh money transfer ka fee kya hai?,transfer_fee_charged,casual,test
 1344_1,1344,Yh mny trnsfr ka fee kya?,transfer_fee_charged,noisy,test
 1344_2,1344,"What is this fee for transferring money, yaar?",transfer_fee_charged,mixed,test
-1349_0,1349,Transfer karne pe fee kyun lag raha hai?,transfer_fee_charged,casual,test
 1349_1,1349,Trnsfr krte wt fee kyun chrg hua?,transfer_fee_charged,noisy,test
 1349_2,1349,"Why did I get charged a fee for transferring money, bhai?",transfer_fee_charged,mixed,test
 1360_0,1360,"Maine transfer kiya aur receiver ne bataya ki unhe sahi amount nahi mila. Jo paisa chhoot gaya hai, usko fill karna padega. Help karo, kya karna chahiye?",transfer_fee_charged,casual,test
@@ -570,7 +559,6 @@ id,orig_id,text,label,style,split
 1398_0,1398,"Bhai, transfer ke time pe fee kyun charge hui?",transfer_fee_charged,casual,test
 1398_1,1398,"Bhai, trnsfr ke time pe fee kyun chrg?",transfer_fee_charged,noisy,test
 1398_2,1398,"Why was a fee charged when I transferred money, bhai?",transfer_fee_charged,mixed,test
-1399_0,1399,Transfer ke liye fee kyun charge ho rahi hai?,transfer_fee_charged,casual,test
 1399_1,1399,Trnsfr ke liye fee kyun chrg?,transfer_fee_charged,noisy,test
 1399_2,1399,"Why was a fee charged to me for transferring money, bhai?",transfer_fee_charged,mixed,test
 1403_0,1403,"Bhai, paise transfer karte waqt charge lag gaya, theek hai?",transfer_fee_charged,casual,test
@@ -606,7 +594,6 @@ id,orig_id,text,label,style,split
 1456_0,1456,Mujhe batao ki mera top-up kyon fail hua?,top_up_failed,casual,test
 1456_1,1456,Mujh btao ki mera top-up kyun fll hua?,top_up_failed,noisy,test
 1456_2,1456,"Could you tell me why my top-up failed, bhai?",top_up_failed,mixed,test
-1468_0,1468,Mera top up fail ho gaya.,top_up_failed,casual,test
 1468_1,1468,Mera tp up fial ho gya,top_up_failed,noisy,test
 1473_0,1473,Mera top-up reject ho gaya.,top_up_failed,casual,test
 1473_1,1473,Mre tpup rjct,top_up_failed,noisy,test
@@ -638,7 +625,6 @@ id,orig_id,text,label,style,split
 1558_0,1558,"Maine card order kiya tha, abhi tak nahi aaya. Madad karo, please!",card_arrival,casual,test
 1558_1,1558,"mne card order kiya tha, abhi tak nahin aaya. hlp pls!",card_arrival,noisy,test
 1558_2,1558,I ordered a card but it hasn't arrived yet. Kripya help!,card_arrival,mixed,test
-1560_0,1560,Mera card abhi tak nahi aaya.,card_arrival,casual,test
 1560_1,1560,Mra crd abhi tk nhi aya.,card_arrival,noisy,test
 1560_2,1560,"My card hasn't arrived yet, please check karen.",card_arrival,mixed,test
 1582_0,1582,"Mujhe lagta hai ki card delivery mein kuch gadbad ho gayi, abhi tak card nahi aaya.",card_arrival,casual,test
@@ -647,9 +633,7 @@ id,orig_id,text,label,style,split
 1583_0,1583,"Mera new card abhi tak deliver nahi hua, kyun itna time lag raha hai?",card_arrival,casual,test
 1583_1,1583,"Mera new card abhi tak deliver nhi hua, kyu itna time lag rha hai?",card_arrival,noisy,test
 1583_2,1583,"I'm still waiting for delivery of my new card, why is it taking so long, yaar?",card_arrival,mixed,test
-1586_0,1586,Mera card abhi tak nahi aaya.,card_arrival,casual,test
 1586_1,1586,Mera card abhi tak n h a a y a.,card_arrival,noisy,test
-1586_2,1586,"My card hasn't arrived yet, bhai.",card_arrival,mixed,test
 1591_0,1591,"Maine card order kiya tha, abhi tak receive nahi hua. Do week ho gaye. Kya karu?",card_arrival,casual,test
 1591_1,1591,"Mne card order kiya tha, abhi tak recve nhi hua. 2 wk ho gaye. Kya karu?",card_arrival,noisy,test
 1591_2,1591,I ordered a card but still haven't received it. It's been do hafta. What can I do?,card_arrival,mixed,test
@@ -677,12 +661,9 @@ id,orig_id,text,label,style,split
 1634_0,1634,"Bhai, main confuse hoon ki kya ho raha hai. App me statement par ek ajeeb extra pound charge dikh raha hai, pending hai aur do din se gaayab nahi ho raha.",extra_charge_on_statement,casual,test
 1634_1,1634,"Bhai, main confus hoon ki kya ho rha hai. App me statement par ek ajeeb extra pound charge dikh rha hai, pending hai aur do din se gaayab nahin ho rha.",extra_charge_on_statement,noisy,test
 1634_2,1634,I'm quite confused as to what is going on. There is an odd extra pound charge on my statement in the app that's just listed as pending and hasn't gone away in a couple of din.,extra_charge_on_statement,mixed,test
-1637_0,1637,Mera card kaam nahi kar raha.,card_not_working,casual,test
 1637_1,1637,Mra crd kaam nhi kr raha.,card_not_working,noisy,test
 1637_2,1637,"My card is not working, please help, kya issue hai?",card_not_working,mixed,test
-1645_0,1645,Mera card kaam nahi kar raha.,card_not_working,casual,test
 1645_1,1645,Mra card kaam nhi kr rahe.,card_not_working,noisy,test
-1645_2,1645,"My card kaam nahi kar raha, please help.",card_not_working,mixed,test
 1648_0,1648,"Help me bro, my card kaam nahi kar raha.",card_not_working,casual,test
 1648_1,1648,"hlp me, m card dnt wrk.",card_not_working,noisy,test
 1648_2,1648,"Please help, mera card kaam nahi kar raha.",card_not_working,mixed,test
@@ -736,8 +717,6 @@ id,orig_id,text,label,style,split
 1738_0,1738,Mujhe ek galat transaction cancel karna hai.,cancel_transfer,casual,test
 1738_1,1738,Mujh ek gllat trxn cancel krna h,cancel_transfer,noisy,test
 1738_2,1738,"I need to cancel an incorrect transaction, kripya.",cancel_transfer,mixed,test
-1739_0,1739,Transfer cancel kaise karun?,cancel_transfer,casual,test
-1739_1,1739,Trnsfr cncl kaise krn?,cancel_transfer,noisy,test
 1739_2,1739,"How do I cancel my transfer, kripya?",cancel_transfer,mixed,test
 1741_0,1741,Maine transaction galat account pe bhej diya.,cancel_transfer,casual,test
 1741_1,1741,Mn trnsctn t th wrng acct,cancel_transfer,noisy,test
@@ -784,7 +763,6 @@ id,orig_id,text,label,style,split
 1814_0,1814,"Hey, koi ne mera card number le liya hai, account freeze kar dena please.",compromised_card,casual,test
 1814_1,1814,"smb h my crd nmr, frz my acct pls",compromised_card,noisy,test
 1814_2,1814,"Someone has my card number, please freeze my account, yaar.",compromised_card,mixed,test
-1822_0,1822,Mujhe lagta hai koi mera card use kar raha hai.,compromised_card,casual,test
 1822_1,1822,Mujh lgt h koi mera card use kar raha h.,compromised_card,noisy,test
 1822_2,1822,"I'm not sure, but someone might be using my card, yaar.",compromised_card,mixed,test
 1823_0,1823,Mere card ko kaise freeze karein? Lagta hai koi use online transactions ke liye use kar raha hai.,compromised_card,casual,test
@@ -857,7 +835,6 @@ id,orig_id,text,label,style,split
 1975_0,1975,I topped up but app ne accept nahi kiya.,top_up_failed,casual,test
 1975_1,1975,I tpd up but app dnt accept it.,top_up_failed,noisy,test
 1975_2,1975,"I topped up but the app didn't accept it, app ne accept nahi kiya.",top_up_failed,mixed,test
-1977_0,1977,Mujhe lagta hai mera top up kaam nahi kiya.,top_up_failed,casual,test
 1977_1,1977,Mujh lagta h ki mr top up kaam nhi kiya.,top_up_failed,noisy,test
 1977_2,1977,"I think my top up didn't work, bhai.",top_up_failed,mixed,test
 1979_0,1979,Mujhe batao ki mera pop-up sent hua ya nahi?,top_up_failed,casual,test

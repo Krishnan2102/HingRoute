@@ -1,0 +1,391 @@
+orig_id,id,label,pred_label,prob_given_label,pred_confidence,style,text
+35,35_0,card_arrival,lost_or_stolen_card,0.09884068648859304,0.36882752340092695,casual,"Mere replacement card ka update chahiye, batao kya status hai?"
+35,35_1,card_arrival,lost_or_stolen_card,0.1389560351253167,0.254260548835864,noisy,"Mre rplcmnt card ka updte chahiye, kya sttus?"
+35,35_2,card_arrival,card_arrival,0.783700711436456,0.783700711436456,mixed,"Could you give me an update on my replacement card, please? Mera card abhi tak nahi aaya."
+79,79_2,card_arrival,transfer_not_received_by_recipient,0.04149339331829525,0.4030895986972253,mixed,How many days max will the courier take? Kitne din lagte hain?
+79,79_0,card_arrival,transfer_not_received_by_recipient,0.08701619926516982,0.3368368061872567,casual,Courier kitne din me aayega? Maximum kitne din lag sakte hain?
+79,79_1,card_arrival,card_arrival,0.30678123210525177,0.30678123210525177,noisy,Crrr kitne dnn me aayega? mx kitne dnn lagte h?
+84,84_1,card_arrival,other,0.1216365891260772,0.7540428567833395,noisy,"Mn lt wk crd ordr kiya tha, ab kitna drr lag skta hai recve krne me?"
+84,84_0,card_arrival,card_arrival,0.5078478795709543,0.5078478795709543,casual,"Maine last week card order kiya tha, ab kitna der lag sakta hai receive karne mein?"
+84,84_2,card_arrival,card_arrival,0.8893342839857744,0.8893342839857744,mixed,"I ordered my new card last week, ab kitna time lag raha hai to receive it?"
+91,91_1,card_arrival,other,0.06866791666113954,0.3824729977689895,noisy,Im stll w8ng 4 my crd.
+91,91_0,card_arrival,card_arrival,0.808980034377618,0.808980034377618,casual,Abhi tak card ka intezaar ho raha hai.
+91,91_2,card_arrival,card_arrival,0.8907917134841091,0.8907917134841091,mixed,"I'm still waiting for my card, bhai."
+93,93_0,card_arrival,card_not_working,0.009325070281198455,0.6542228591162159,casual,Is problem ka solution kya hai?
+93,93_2,card_arrival,card_not_working,0.021292646410754647,0.3438578103970025,mixed,"What is the solution of this problem, kripya batao?"
+93,93_1,card_arrival,card_not_working,0.05299681143692232,0.3320220597134019,noisy,Is prblm ka soln kyaa h?
+226,226_1,extra_charge_on_statement,other,0.05811592940387384,0.29107494537830103,noisy,Wht's ths fde dbt n my acc?
+226,226_2,extra_charge_on_statement,extra_charge_on_statement,0.3609469704663069,0.3609469704663069,mixed,"What is this fee debit on my account, bhai?"
+226,226_0,extra_charge_on_statement,extra_charge_on_statement,0.7274095292455939,0.7274095292455939,casual,"Yo, yeh fee debit kaun sa hai? Account me charge kya lag raha hai?"
+255,255_0,extra_charge_on_statement,pending_card_payment,0.1405704337784975,0.4216165356892126,casual,"Mere account pe ek pending payment hai jo bilkul ajeeb lag raha hai. Mujhe yaad nahi aata ki maine yeh kiya, aur yeh delete nahi ho raha. Kya aap madad kar sakte ho?"
+255,255_2,extra_charge_on_statement,pending_card_payment,0.1817450790340976,0.2732136252003633,mixed,There's a pending payment on my account that's very strange. I don't remember making this and it won't go away. Can you help me figure this out? (Kya aap madad kar sakte ho?)
+255,255_1,extra_charge_on_statement,extra_charge_on_statement,0.29438179090480676,0.29438179090480676,noisy,"Mre acct pe ek pndng pmnt hai jo bilkly ajeeb lag rha hai. Mujhe yad nhi aata ki maine yeh kiya, aur yeh delte nhi ho rha. Kya aap madad kar sakte ho?"
+338,338_1,card_not_working,card_arrival,0.11732861645708227,0.31232273338103306,noisy,Mre crd snt wkng at ll.
+338,338_0,card_not_working,card_not_working,0.9518596891774835,0.9518596891774835,casual,Mere card kaam hi nahi kar raha hai.
+338,338_2,card_not_working,card_not_working,0.9826894921423088,0.9826894921423088,mixed,"My card is not working at all, please help. Mera card kaam nahi kar raha."
+344,344_2,card_not_working,declined_card_payment,0.033125819185716485,0.8042789511073338,mixed,"My Netflix subscription says there's an issue with my card info, but sab theek lag raha tha. Why is it being declined?"
+344,344_1,card_not_working,declined_card_payment,0.0428138653222905,0.71769995512794,noisy,"Nflx bta rha ki card info me koi issue hai, par sab theek lag rha tha. ky decline ho rha?"
+344,344_0,card_not_working,declined_card_payment,0.059450404059723454,0.7724836884919669,casual,"Netflix bol raha hai card info mein koi issue hai, par sab theek lag raha tha. Kya reason se decline ho raha hai?"
+346,346_1,card_not_working,other,0.12275910680596548,0.20293338871149755,noisy,Iska rzn ky h?
+346,346_0,card_not_working,card_not_working,0.2490439013481178,0.2490439013481178,casual,Iska reason kya hai?
+346,346_2,card_not_working,card_not_working,0.2497297633402623,0.2497297633402623,mixed,"What is the reason for that, bhai?"
+350,350_1,card_not_working,declined_card_payment,0.02225847051024936,0.885570862550832,noisy,Aj khn kht wt mr card declined. Kyun?
+350,350_2,card_not_working,declined_card_payment,0.0774635396407146,0.6945640309910877,mixed,Today I was out eating and my card was declined. Why is that? Kya hua?
+350,350_0,card_not_working,declined_card_payment,0.2517286474583467,0.5903382148415324,casual,Aaj khana khate waqt mera card decline ho gaya. Kyun ho raha hai?
+358,358_1,card_not_working,other,0.06605150868620709,0.28516500704189207,noisy,"mch rjkt card, 2n kya krun?"
+358,358_0,card_not_working,card_not_working,0.3587999869434707,0.3587999869434707,casual,"Machine ne mera card reject kar diya, ab main kya karun?"
+358,358_2,card_not_working,card_not_working,0.4591931058182284,0.4591931058182284,mixed,What should I do if the machine rejects my card? Kya karun?
+368,368_1,card_not_working,cancel_transfer,0.11395238374378058,0.5320521072416731,noisy,"N trnsctions r n acceptd, ws wrong wth my crd?"
+368,368_2,card_not_working,card_not_working,0.3047076126594353,0.3047076126594353,mixed,"No transactions are being accepted, what's wrong with my card, bhai?"
+368,368_0,card_not_working,card_not_working,0.7541096235946176,0.7541096235946176,casual,"No transactions accept ho rahe hain, card me kya problem hai?"
+369,369_0,card_not_working,compromised_card,0.04062672021108011,0.4582277374241934,casual,Mera card freeze hua hai kya?
+369,369_1,card_not_working,lost_or_stolen_card,0.10197008397931416,0.31799628982630107,noisy,M card frz kyaa?
+369,369_2,card_not_working,other,0.18674371464074166,0.3192804134589455,mixed,Is my card frozen hai?
+375,375_1,card_not_working,card_arrival,0.08012719663349284,0.47961377345931794,noisy,Dmged crd ko kaise r-order karun?
+375,375_0,card_not_working,card_arrival,0.116787276627526,0.41604505883607495,casual,Damaged card ko kaise re-order karun?
+375,375_2,card_not_working,other,0.20133722063250642,0.2927280034354431,mixed,How do I re-order a damaged card? Kripya madad.
+391,391_0,card_not_working,other,0.026125194972852987,0.3984386182633859,casual,App mein security settings kaise check karoon?
+391,391_1,card_not_working,other,0.03357739047883984,0.5622248633875276,noisy,Ap se secrty setngs kaise chek krna?
+391,391_2,card_not_working,compromised_card,0.04120942654889368,0.5675591986891636,mixed,How do I check security settings using the app? Kripya help karo.
+402,402_2,card_not_working,declined_card_payment,0.03579836453823523,0.772574174460347,mixed,"I was at a restaurant today and my card was declined, payment didn't go through. I need help, kya aap fix kar sakte hain?"
+402,402_1,card_not_working,declined_card_payment,0.03597516196635199,0.7974028429836096,noisy,hE aaj rstrnt m card dclnd nd pmnt wnt go thrgh nd i nd hp. cn yu fx ths?
+402,402_0,card_not_working,declined_card_payment,0.08659261983807963,0.6289194776194674,casual,"Hey, aaj restaurant mein card reject ho gaya, payment fail ho gaya. Help karo, fix karo please."
+425,425_1,card_not_working,declined_card_payment,0.09773831279764879,0.22775663911592767,noisy,Hw cl t b tht my Crd s nt fnctng mnyr?
+425,425_2,card_not_working,card_not_working,0.5111121053425882,0.5111121053425882,mixed,"How can it be that my Card is not functioning anymore, yaar?"
+425,425_0,card_not_working,card_not_working,0.9783422310567709,0.9783422310567709,casual,"My card ka kya issue hai, ab kaam nahi kar raha?"
+431,431_2,lost_or_stolen_card,compromised_card,0.009523311996735338,0.3384329373934216,mixed,Has there been any activity on my card today? Kya koi transaction hua?
+431,431_0,lost_or_stolen_card,other,0.016111939469791114,0.2747340604239636,casual,Aaj mere card pe koi activity hui kya?
+431,431_1,lost_or_stolen_card,card_not_working,0.03246256350856405,0.27395942665728573,noisy,d k? t? d? card pe aaj koi act?
+436,436_2,lost_or_stolen_card,compromised_card,0.05027970484711921,0.4966275895337177,mixed,"Could you give me info to freeze my card immediately, kripya?"
+436,436_0,lost_or_stolen_card,other,0.08975606405281628,0.5049909883125574,casual,"Hey, can you tell me how to freeze my card right away?"
+436,436_1,lost_or_stolen_card,compromised_card,0.1021114721037213,0.25620904946680484,noisy,"hE y, cn u tl me hw 2 frz my crd rght awy?"
+437,437_1,lost_or_stolen_card,other,0.07986529301914193,0.4682214444578127,noisy,"Bhai, cd frz krne ke li phn num kyaa hai?"
+437,437_0,lost_or_stolen_card,other,0.09790612327157244,0.33414469546562214,casual,"Bhai, card freeze karne ke liye phone number kya hai?"
+437,437_2,lost_or_stolen_card,compromised_card,0.10241427335180749,0.28848919639516674,mixed,"Hi, what's the phone number to freeze a card? Card freeze karne ka number kya hai?"
+446,446_2,lost_or_stolen_card,card_arrival,0.021109729892569113,0.8850211147249036,mixed,"Could you tell me the status of my new card, bhai?"
+446,446_0,lost_or_stolen_card,card_arrival,0.0216569448798273,0.91812802713519,casual,"Bhai, mera new card ka status kya hai?"
+446,446_1,lost_or_stolen_card,card_arrival,0.0550167262085432,0.7479438766486303,noisy,"Bhai, n3w card ka sttus btao??"
+458,458_1,lost_or_stolen_card,card_arrival,0.07380230471700804,0.4013328911208481,noisy,Kya aap mujhe gde kar skte ho ki mera card kahan hai?
+458,458_0,lost_or_stolen_card,lost_or_stolen_card,0.5144932286848123,0.5144932286848123,casual,"Batao, mera card kaunse location pe hai?"
+458,458_2,lost_or_stolen_card,lost_or_stolen_card,0.5213086630049085,0.5213086630049085,mixed,Can you guide me to my card's location? Mera card kahan hai?
+462,462_1,lost_or_stolen_card,other,0.11288067187604879,0.3196611194435787,noisy,"hey, mr card trnt frz dr pls"
+462,462_0,lost_or_stolen_card,other,0.1912340221942966,0.4774027177124501,casual,"Hey, mera card turant freeze kar do please."
+462,462_2,lost_or_stolen_card,lost_or_stolen_card,0.36968550357118835,0.36968550357118835,mixed,"Could you please freeze my card immediately, kripya?"
+487,487_0,lost_or_stolen_card,card_arrival,0.042613628280104135,0.25424981591956236,casual,Mera card kho gaya hai aur mujhe nahi pata ki last kaha tha jahan maine card use kiya. Account check kar ke batao last kaun si jagah thi?
+487,487_2,lost_or_stolen_card,compromised_card,0.05075354593041548,0.36759350076897945,mixed,I misplaced my card and I don't know where the last place was where I used the card. Can you look at my account and tell me the last jagah where I used the card?
+487,487_1,lost_or_stolen_card,lost_or_stolen_card,0.22293390185302997,0.22293390185302997,noisy,mra card khgya h aur mn pata nhi ki lst ka h jhn mn card use kiya. acc chk k k batao lst kaun si jagah th?
+492,492_1,lost_or_stolen_card,card_arrival,0.11915106329321262,0.3421369614845306,noisy,Wht r th steps I nd to do if I hv a stlln card?
+492,492_2,lost_or_stolen_card,lost_or_stolen_card,0.4389941684922676,0.4389941684922676,mixed,"What are the steps I need to do if I have a stolen card, bhai?"
+492,492_0,lost_or_stolen_card,lost_or_stolen_card,0.7981539501964429,0.7981539501964429,casual,Mere stolen card ke liye kya steps lene padenge?
+493,493_1,lost_or_stolen_card,card_not_working,0.01252946438621318,0.5425906459737856,noisy,mjh card nhi mlj rha
+493,493_0,lost_or_stolen_card,card_not_working,0.16240036259079993,0.3883096447834442,casual,Mujhe mera card nahi mil raha.
+493,493_2,lost_or_stolen_card,lost_or_stolen_card,0.7075673430243262,0.7075673430243262,mixed,"I can't find my card, please help bhai."
+507,507_0,lost_or_stolen_card,card_not_working,0.11851267442690512,0.5250403633666415,casual,"Maine apna card restaurant mein chhoda, ab woh missing hai."
+507,507_2,lost_or_stolen_card,lost_or_stolen_card,0.4860605971943994,0.4860605971943994,mixed,"I left my card at a restaurant and now it's missing, bhai."
+507,507_1,lost_or_stolen_card,lost_or_stolen_card,0.5042113680378342,0.5042113680378342,noisy,"Mn apna card rstrnt mei choda, ab missing."
+532,532_0,cancel_transfer,transfer_fee_charged,0.1129480507610494,0.5505306974693787,casual,Mujhe ek transfer badalna hai.
+532,532_1,cancel_transfer,transfer_fee_charged,0.1623638512407351,0.42554301658718047,noisy,Mujh e ek trnsfr bdln h
+532,532_2,cancel_transfer,transfer_fee_charged,0.3260417663252964,0.3576043736646904,mixed,"I need to change a transfer, yaar."
+581,581_1,cancel_transfer,other,0.10429147591314818,0.407678932388524,noisy,Tranfr rk skt hn ky?
+581,581_0,cancel_transfer,cancel_transfer,0.7671058487117883,0.7671058487117883,casual,Transfer rok sakta hoon kya?
+581,581_2,cancel_transfer,cancel_transfer,0.8427661581322897,0.8427661581322897,mixed,"Can I stop the transfer, kripya?"
+628,628_1,cancel_transfer,transfer_not_received_by_recipient,0.057737954929565204,0.7567180118577452,noisy,"Mne trnsfr arrgn, bt n lngr nd t snd t. Hw d I stp th trnsfr?"
+628,628_2,cancel_transfer,other,0.24869951994614636,0.2747002156336218,mixed,"I have arranged a transfer, but ab use bhejna nahi chahta. How do I stop the transfer?"
+628,628_0,cancel_transfer,cancel_transfer,0.8436219437842503,0.8436219437842503,casual,"Maine transfer arrange kiya hai, lekin ab use bhejna nahi chahta. Is transfer ko kaise cancel karun?"
+696,696_0,transfer_not_received_by_recipient,declined_card_payment,0.054348793474582976,0.6074583166086167,casual,Maine payment bheja tha lekin app me dikha nahi raha.
+696,696_1,transfer_not_received_by_recipient,declined_card_payment,0.057437710444692626,0.3496352368702722,noisy,Mne pmt bhej dtha lekin app me n dkh raha.
+696,696_2,transfer_not_received_by_recipient,pending_card_payment,0.0919803745185807,0.4415545592365331,mixed,"I sent a payment but it isn't showing up in the app, bhai."
+768,768_0,transfer_not_received_by_recipient,other,0.05316818743249766,0.46593220511654204,casual,"I accidentally entered my retailer's info, ab kya karun?"
+768,768_1,transfer_not_received_by_recipient,other,0.11052150557835783,0.3547272372071984,noisy,"I accdntly entrd my retlrs info, hw r i to do nxt?"
+768,768_2,transfer_not_received_by_recipient,compromised_card,0.13632376286119519,0.29710334930357873,mixed,"I accidentally entered my retailer's information, what should I do next, yaar?"
+810,810_2,transfer_not_received_by_recipient,card_not_working,0.07482665464413119,0.44311511386949143,mixed,"I can't see my receipt, kripya madad karein."
+810,810_1,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.40166928876435126,0.40166928876435126,noisy,Rct dkh nhi rha.
+810,810_0,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.8549469768640275,0.8549469768640275,casual,Receipt dikha nahi raha.
+846,846_1,compromised_card,cancel_transfer,0.08344939533661215,0.28676663402267605,noisy,Mre acct mn fdr rokne ka tarika kya h?
+846,846_2,compromised_card,compromised_card,0.45525227865188167,0.45525227865188167,mixed,How do I stop fraud on my account? Kya steps lene honge?
+846,846_0,compromised_card,compromised_card,0.8809840629165727,0.8809840629165727,casual,Mere account mein fraud kaise rokun?
+851,851_0,compromised_card,other,0.12073395768307961,0.5030858279475613,casual,"Hey, mera credit card par kuch shakk ki spending dikh rahi hai jo maine nahi ki. Kya karun?"
+851,851_1,compromised_card,pending_card_payment,0.27266177477544307,0.31229931069995326,noisy,"Hey, mre crdit card pr kuch shkk ki spndng dkh rhi hai jo mn nhi ki. Ky krn?"
+851,851_2,compromised_card,compromised_card,0.43825951897531745,0.43825951897531745,mixed,"I see some suspicious spending on my credit card that I don't recall. What should I do, yaar?"
+867,867_1,compromised_card,other,0.039385348334650336,0.5667676053718506,noisy,kya mn apni orig card frz krne se pehle nayi card order karun?
+867,867_0,compromised_card,other,0.043878709936453854,0.6837068863298139,casual,Kya main apni original card freeze karne se pehle nayi card order karun?
+867,867_2,compromised_card,lost_or_stolen_card,0.15314542264132797,0.37545945317911483,mixed,"Should I order a new card before I freeze my original card, bhai?"
+872,872_1,compromised_card,other,0.0949930405658587,0.22082309832667998,noisy,mjh cd ki surksh pe dbt h
+872,872_0,compromised_card,card_not_working,0.10639118665011416,0.5877910154106251,casual,Mujhe lag raha hai mera card safe nahi hai.
+872,872_2,compromised_card,compromised_card,0.3707079053749462,0.3707079053749462,mixed,"I'm suspicious about my card's security, kaafi odd lag raha hai."
+875,875_1,compromised_card,card_arrival,0.1069795392019137,0.36169612189993594,noisy,Mre crd cmmprsd h?
+875,875_0,compromised_card,compromised_card,0.5204162434136057,0.5204162434136057,casual,Mujhe lag raha hai ki mera card compromise ho gaya hai.
+875,875_2,compromised_card,compromised_card,0.8280746253204215,0.8280746253204215,mixed,"I think my card might be compromised, bhai."
+879,879_1,compromised_card,extra_charge_on_statement,0.08611644306809246,0.420228663316557,noisy,Mre stmnt shws chrgs fr thngs I nvr prchsd. Wre my acct dts stlnd?
+879,879_2,compromised_card,extra_charge_on_statement,0.17297188258413007,0.4897437562382109,mixed,My statement shows charges for things I never bought. Kya my account details chura liye gaye?
+879,879_0,compromised_card,extra_charge_on_statement,0.24146336230212606,0.456961728487905,casual,Mere statement me charges dikha rahe hain jo maine kabhi kharida nahi. Kya mera account details chura liye gaye hain?
+882,882_1,compromised_card,lost_or_stolen_card,0.14876358280899316,0.32253012924393365,noisy,Koi ne mr card ka accss le liya hoga.
+882,882_0,compromised_card,compromised_card,0.5746828068211675,0.5746828068211675,casual,Koi mera card access kar raha hoga.
+882,882_2,compromised_card,compromised_card,0.7487918340770322,0.7487918340770322,mixed,"Someone might have had access to my card, koi bhi ho sakta hai."
+891,891_1,compromised_card,lost_or_stolen_card,0.021308202716955337,0.9441256290569324,noisy,"Mera card inf chori ho gya, ab kya karu?"
+891,891_0,compromised_card,lost_or_stolen_card,0.09145627288598347,0.8116861308025703,casual,"Mera card info chori ho gaya, ab kya karun?"
+891,891_2,compromised_card,lost_or_stolen_card,0.09404976676379184,0.8206552486823382,mixed,"My card info was stolen, kya karna chahiye?"
+920,920_2,compromised_card,lost_or_stolen_card,0.014394150127052339,0.8688388710412257,mixed,"My wallet was stolen and all my credit cards were in there. Help, bhai?"
+920,920_0,compromised_card,lost_or_stolen_card,0.04567416058506231,0.848672755904212,casual,Mera wallet chori ho gaya aur saare credit cards usme the. Help?!!
+920,920_1,compromised_card,lost_or_stolen_card,0.07095468490084,0.8196100882064813,noisy,Mera walet chori ho gy aur saare crd cads usme the. Hlp??
+922,922_0,compromised_card,card_not_working,0.07169880566945806,0.7123341952671292,casual,Mere card me security breach ho gaya hai.
+922,922_2,compromised_card,card_not_working,0.08378018831685377,0.5743115184144244,mixed,"The card has suffered a security breach, bhai."
+922,922_1,compromised_card,card_not_working,0.10426502569925464,0.5943880191815557,noisy,Crd pr scurity brech ho gya h
+968,968_0,pending_card_payment,declined_card_payment,0.04575070751686477,0.8816780736719628,casual,"Maine account se payment karne ki koshish ki, par payment fail ho raha hai. Kya chal raha hai?"
+968,968_1,pending_card_payment,declined_card_payment,0.0859829425738638,0.5968017772695579,noisy,"Mn acnt se pay try ki, par pay nt go thrgh. Whs gng on?"
+968,968_2,pending_card_payment,declined_card_payment,0.16062245488252433,0.7429056363554662,mixed,I tried to pay through my account but the payment is not going through. What's going on? Kya issue hai?
+989,989_1,pending_card_payment,other,0.06167537407272074,0.4287972408585997,noisy,Mn bhi ptmt ka vt kr rha hn.
+989,989_2,pending_card_payment,pending_card_payment,0.47419401202474293,0.47419401202474293,mixed,"I'm still waiting on a payment, yaar."
+989,989_0,pending_card_payment,pending_card_payment,0.5257948203002863,0.5257948203002863,casual,Main abhi tak payment ka wait kar raha hoon.
+995,995_1,pending_card_payment,transfer_not_received_by_recipient,0.03509657298366595,0.6776471122645711,noisy,Txn kb go thr?
+995,995_2,pending_card_payment,transfer_not_received_by_recipient,0.15921347254473245,0.5054165539128158,mixed,"When will the transaction go through, bhai?"
+995,995_0,pending_card_payment,transfer_not_received_by_recipient,0.33638656370086606,0.35812930306457,casual,Transaction kab process hoga?
+1038,1038_0,pending_card_payment,declined_card_payment,0.0342164355499515,0.8468004191072498,casual,Yeh card payment ka delay ka reason kya hai? Account me apply nahi ho raha.
+1038,1038_1,pending_card_payment,declined_card_payment,0.07962737516963438,0.6315615103819706,noisy,wh t s th cse f th dly n pplyng my crd pmnt t my accnt?
+1038,1038_2,pending_card_payment,declined_card_payment,0.1110625525103502,0.3675410985502806,mixed,What's the reason for the delay in applying my card payment to my account? Is there koi issue?
+1104,1104_1,declined_card_payment,card_arrival,0.08324390932134994,0.22198419045331472,noisy,mr card dlynd prtry r prtry dlynd
+1104,1104_2,declined_card_payment,declined_card_payment,0.804676731199034,0.804676731199034,mixed,"Could you explain why my card keeps getting declined every time I try to use it, kya?"
+1104,1104_0,declined_card_payment,declined_card_payment,0.9621276627439921,0.9621276627439921,casual,"Bhai, mera card baar baar decline ho raha hai, kyun?"
+1123,1123_1,declined_card_payment,other,0.04186035847766539,0.3293691739086173,noisy,cn u tl me ky card wz drnld?
+1123,1123_2,declined_card_payment,declined_card_payment,0.86854658632938,0.86854658632938,mixed,"Can you tell me why my card was declined, bhai?"
+1123,1123_0,declined_card_payment,declined_card_payment,0.9171159549429454,0.9171159549429454,casual,"Hey, mera card kyun reject hua?"
+1124,1124_0,declined_card_payment,card_not_working,0.09084070442402054,0.4245515854491206,casual,"Mera card ka transaction fail ho gaya, samajh nahi aa raha. Tumne kaha tha sab theek hai."
+1124,1124_1,declined_card_payment,transfer_not_received_by_recipient,0.11806461866226083,0.35797370587451705,noisy,"Mra crd trnsfr fl gd, smjh nhi aa rha. Tm kht tha sb thk hy."
+1124,1124_2,declined_card_payment,card_not_working,0.12537568908146865,0.3288994474981589,mixed,My card didn't go through. It's not making sense. You told me ki sab theek hai.
+1157,1157_0,declined_card_payment,other,0.12160771087158223,0.5066945283833368,casual,"Ek shop jahan main jaata hoon, waha mujhe pay karne nahi diya."
+1157,1157_1,declined_card_payment,other,0.13721038837124236,0.5258785334232757,noisy,"Ek shop jahan main jaa hoon, waha mujhe pay karne nhi diya."
+1157,1157_2,declined_card_payment,declined_card_payment,0.8304252676492707,0.8304252676492707,mixed,"A shop I go to didn't let me pay, yahan payment accept nahi kiya."
+1169,1169_1,declined_card_payment,compromised_card,0.12723781660023673,0.23687484415511262,noisy,Yh pmt ny n hrng? Kya mr accnt frz gd h ya koi aur prob? Cn I fck t fix?
+1169,1169_2,declined_card_payment,pending_card_payment,0.1612043777370734,0.3174981176609074,mixed,Why is this payment not going through? Kya mera account freeze ho gaya hai ya koi aur issue? What can I do to fix this problem?
+1169,1169_0,declined_card_payment,declined_card_payment,0.2677732979454055,0.2677732979454055,casual,Yeh payment kyun nahi ho raha? Kya mera account freeze ho gaya hai ya koi aur problem? Kaise fix karein?
+1179,1179_1,declined_card_payment,card_not_working,0.04012612336515915,0.5857359943611312,noisy,"Mn tr krne ke liye card use ki, lekin kaam nhi kiya."
+1179,1179_2,declined_card_payment,card_not_working,0.215369939329693,0.6859198025806675,mixed,"I tried to pay with my card, but yeh kaam nahi kar raha."
+1179,1179_0,declined_card_payment,declined_card_payment,0.6266855203358448,0.6266855203358448,casual,"Maine apni card se payment karne ki koshish ki, lekin kaam nahin kiya."
+1232,1232_1,declined_card_payment,lost_or_stolen_card,0.1259895445664203,0.209156642944199,noisy,"Mre crd pmnt me koi prblm aa gya, hlp krgo?"
+1232,1232_2,declined_card_payment,declined_card_payment,0.32348399800396715,0.32348399800396715,mixed,"I had a problem with my card payment, can you help? कृपया मदद करें."
+1232,1232_0,declined_card_payment,declined_card_payment,0.47219818911691624,0.47219818911691624,casual,"Mere card payment me koi problem aa gaya, help karoge?"
+1258,1258_0,transfer_fee_charged,other,0.11896943541156134,0.5059483428779529,casual,I sent money but the person got less than expected. Now I have to send more to make up the difference. What's happening?
+1258,1258_1,transfer_fee_charged,transfer_fee_charged,0.6528059379295825,0.6528059379295825,noisy,"I mde a trnsfr nd th rcvr sd an amt ws rcvd, bt less thn th rght amt. I nwy hv t trnsfr mr t g th rmndr t th rcvr. Cn u tl me abt ths. Whts bn gnng on?"
+1303,1303_0,transfer_fee_charged,other,0.024164716361658744,0.4918969920903373,casual,Meri card pe kaun charge kar raha hai?
+1303,1303_2,transfer_fee_charged,extra_charge_on_statement,0.058642607794842136,0.2902031598293305,mixed,"Who charged my card, bhai?"
+1303,1303_1,transfer_fee_charged,extra_charge_on_statement,0.15555329515923133,0.2553088471260965,noisy,kyo card pe chrg ho gya?
+1306,1306_0,transfer_fee_charged,transfer_not_received_by_recipient,0.1184189804896686,0.5536575029999022,casual,"Maine kisi ko paise bheje the, par unhone poora amount nahi liya, check kar lo."
+1306,1306_2,transfer_fee_charged,transfer_not_received_by_recipient,0.1277472066789581,0.5451255931065183,mixed,"I sent money to someone, but they said they didn't receive the poora amount. Can you please check this?"
+1306,1306_1,transfer_fee_charged,transfer_not_received_by_recipient,0.15490587760172123,0.5343141703391737,noisy,"Maine kisee ko paise bheje the, par unhone poora amt nhi liya, chk kar lo."
+1321,1321_1,transfer_fee_charged,transfer_not_received_by_recipient,0.11171357328694967,0.2141971218346013,noisy,Mn trd t fr nd rvr nd thy ndnt gt th rght amt. Wht s gng n nd hw d I ctnt t hlp m?
+1321,1321_0,transfer_fee_charged,other,0.25122252238443293,0.3061545845128779,casual,"Maine paisa transfer karne ki koshish ki, par receiver ko sahi amount nahi mila. Yeh kya ho raha hai, aur kis se contact karun?"
+1321,1321_2,transfer_fee_charged,transfer_fee_charged,0.44819325048799535,0.44819325048799535,mixed,I tried to transfer money to a receiver but they didn't get the right amount. Kya ho raha hai and who should I contact for help?
+1345,1345_2,transfer_fee_charged,compromised_card,0.1487969845965412,0.27224697372499085,mixed,I have used this account overseas recently. Kya koi fee increase hui hai jo mujhe pata nahi?
+1345,1345_1,transfer_fee_charged,transfer_fee_charged,0.40614364114680146,0.40614364114680146,noisy,I used this accnt abroad recntly. Kya koi fee bdhi hai jo mujhe pata nhi?
+1345,1345_0,transfer_fee_charged,transfer_fee_charged,0.4325253703743989,0.4325253703743989,casual,"I recently used this account abroad, koi fee badhi hai kya?"
+1347,1347_2,transfer_fee_charged,other,0.06912950420523517,0.6781881421842718,mixed,"I need to know how much it costs to transfer funds, please batao."
+1347,1347_0,transfer_fee_charged,transfer_not_received_by_recipient,0.19280301495830346,0.3985186905792475,casual,Mujhe batana hai ki funds transfer ka cost kitna hai.
+1347,1347_1,transfer_fee_charged,transfer_not_received_by_recipient,0.20253453672467311,0.41113600206690015,noisy,Mujhko bata 2 ki funds transfer ka cost kitna h?
+1348,1348_1,transfer_fee_charged,transfer_not_received_by_recipient,0.10006522627749437,0.8146005828885672,noisy,"Trnsfr kiya, par jis ko paise bheje the, unko sahi amt nhi mila. Yh kyun hua? Aur baki paise kaise bhej doon?"
+1348,1348_0,transfer_fee_charged,transfer_not_received_by_recipient,0.21924490170351413,0.6701738094437886,casual,"Transfer kiya tha, par jis ko paise bheje the, unko sahi amount nahi mila. Yeh kyon hua? Aur baki paise kaise bhej doon?"
+1348,1348_2,transfer_fee_charged,transfer_fee_charged,0.4181874990517476,0.4181874990517476,mixed,I made a transfer but the person I sent the money to didn't get the right amount. Why did this happen and how can I get the remaining paise to them?
+1371,1371_0,transfer_fee_charged,other,0.08822979674300717,0.5809369887237983,casual,Mujhe ek service fee mili hai jo main kabhi pehle nahi dekhi. Yeh tab aayi jab maine online ek international seller se kuch kharida.
+1371,1371_1,transfer_fee_charged,other,0.20694188602412977,0.3500158648737232,noisy,mujh ek srv fee mili jo main kabhi nahin dekhi. wo fee tab ayi jab maine online int seller se kuch kharid
+1371,1371_2,transfer_fee_charged,transfer_fee_charged,0.5663660302786199,0.5663660302786199,mixed,"I have a service fee that I've never seen before. It appeared after I bought something from an international seller online, yeh fee unexpected hai."
+1375,1375_0,transfer_fee_charged,extra_charge_on_statement,0.08965785661164904,0.8600255265569833,casual,Maine notice kiya ki mere account pe extra charge lag raha hai. Kya bata sakte ho ki kyun?
+1375,1375_1,transfer_fee_charged,extra_charge_on_statement,0.18027274990367906,0.7491050587296081,noisy,Mn notice kiya ki mere acnt pe extra chrge lag ra h. Kya bta sakto ki kyun?
+1375,1375_2,transfer_fee_charged,extra_charge_on_statement,0.23153526247585465,0.7424154553862052,mixed,I noticed that there was an extra charge fee on my account. Kya aap explain kar sakte hain ki why?
+1401,1401_1,transfer_fee_charged,extra_charge_on_statement,0.09480130538662866,0.8678445839515905,noisy,"Mujh e ek fee chrg ki, jiske baare me mujhe pata nhi tha."
+1401,1401_2,transfer_fee_charged,extra_charge_on_statement,0.2023481426338363,0.5620953215390229,mixed,"I was charged a fee that I wasn't told about, par mujhe koi reason nahi bataya."
+1401,1401_0,transfer_fee_charged,extra_charge_on_statement,0.4067196866184908,0.5146300308895811,casual,Mujhe ek fee charge ki gayi jo mujhe batayi nahi gayi.
+1486,1486_2,top_up_failed,declined_card_payment,0.06176800073573614,0.4045108387211685,mixed,"Why are you keeping my money from me by declining my card? What is going on, bhai?"
+1486,1486_1,top_up_failed,top_up_failed,0.31406984179915515,0.31406984179915515,noisy,"Bhai, meri card rjct ho rhi hai, aur mera paisa kaun rok raha hai? Kya chal raha hai?"
+1486,1486_0,top_up_failed,top_up_failed,0.317649291506261,0.317649291506261,casual,"Bhai, meri card reject ho rahi hai, aur mera paisa kaun rok raha hai? Kya chal raha hai?"
+1493,1493_1,top_up_failed,declined_card_payment,0.0485671653280935,0.429257716114414,noisy,whts th prblm? my crd kps gtng dclnd fr t p. I nd to knw wht is gnng.
+1493,1493_2,top_up_failed,top_up_failed,0.7604359130080595,0.7604359130080595,mixed,What's the problem? My card keeps getting declined for top up. I need to know kya ho raha hai.
+1493,1493_0,top_up_failed,top_up_failed,0.9072172064045777,0.9072172064045777,casual,"Bhai, kya problem hai? Meri card top-up ke liye baar-baar decline ho rahi hai. Kya chal raha hai?"
+1533,1533_1,top_up_failed,declined_card_payment,0.11903870981724693,0.2808792680736863,noisy,"Aaj card me extra paise add karna hai kyunki baar baar decline ho rha hai, aur mjhe turant use karna hai. Kya aap fix kar sakte ho ya koi alt bata sakte ho?"
+1533,1533_2,top_up_failed,other,0.20084266544348228,0.3938355473644674,mixed,"I need to add more funds to my card today because it keeps being declined, and I need to use it immediately. Can you fix this or batao me koi alternatives?"
+1533,1533_0,top_up_failed,top_up_failed,0.2773014852169242,0.2773014852169242,casual,"Aaj card me extra paise add karne hain kyunki baar baar decline ho raha hai, aur mujhe turant use karna hai. Kya aap isko fix kar sakte ho ya koi alternative bata sakte ho?"
+1556,1556_0,card_arrival,lost_or_stolen_card,0.08640852580896145,0.4119832418814562,casual,Mera card kaise find karun?
+1556,1556_1,card_arrival,card_not_working,0.0884133157510479,0.4869154376531701,noisy,Mra crd kaise fd krn?
+1556,1556_2,card_arrival,lost_or_stolen_card,0.24019475115379355,0.5464711415243513,mixed,"How can I locate my card, yaar?"
+1609,1609_2,extra_charge_on_statement,transfer_fee_charged,0.08944009965515991,0.7664201432633675,mixed,Where did this fee aayi?
+1609,1609_1,extra_charge_on_statement,other,0.21347215101458925,0.49957272846443207,noisy,Fee ka src kyaa?
+1609,1609_0,extra_charge_on_statement,transfer_fee_charged,0.22993069290038712,0.32541940890501925,casual,Fee ka source kya hai?
+1636,1636_1,card_not_working,card_arrival,0.13113784198538997,0.30569629041180496,noisy,"Mn trd my card 4x, it nvr wkd."
+1636,1636_0,card_not_working,declined_card_payment,0.20366039312958903,0.36093507746087283,casual,"Maine apni card ko bahut baar try kiya, par kabhi kaam nahi kiya."
+1636,1636_2,card_not_working,other,0.21640269138548274,0.2725727973975939,mixed,"I've tried my card a bunch of times, but it never kaam karta."
+1646,1646_1,card_not_working,other,0.10924860751783788,0.765686254978155,noisy,Kse apna phscl card kaam me le sakta ho?
+1646,1646_2,card_not_working,card_not_working,0.8508514054786387,0.8508514054786387,mixed,How can I get my physical card to work? Kya koi solution hai?
+1646,1646_0,card_not_working,card_not_working,0.9529803649555367,0.9529803649555367,casual,Mera physical card kaam kaise karega?
+1655,1655_2,card_not_working,declined_card_payment,0.03771757878440743,0.863948087105305,mixed,"How can I fix the issue where my card doesn't go through, it keeps being rejected, kya karein?"
+1655,1655_1,card_not_working,declined_card_payment,0.12511216829346566,0.5806504628607436,noisy,mre card k kais fix karun? yeh rejct ho rha hai.
+1655,1655_0,card_not_working,declined_card_payment,0.21607845566039535,0.5071266214144211,casual,"Mere card ko kaise fix karun, yeh bilkul hi reject ho raha hai?"
+1713,1713_1,lost_or_stolen_card,card_arrival,0.14954798697560712,0.3186068739255528,noisy,t u m r card ko loc8 r k sakt e ho?
+1713,1713_0,lost_or_stolen_card,other,0.15285815381668352,0.3118471663241308,casual,Kya tum mere card ko locate kar sakte ho?
+1713,1713_2,lost_or_stolen_card,lost_or_stolen_card,0.4362133832150557,0.4362133832150557,mixed,Can you locate my card? Kya aap mere card ko locate kar sakte hain?
+1743,1743_1,cancel_transfer,other,0.06441100738753247,0.633055996157572,noisy,"Hey, mhn wnt 2 rvrt wht I did tsmrn"
+1743,1743_2,cancel_transfer,other,0.292660395221165,0.5677545950899453,mixed,"I want to go back on what I did this morning, kripya revert kare."
+1743,1743_0,cancel_transfer,cancel_transfer,0.5783155034373965,0.5783155034373965,casual,"Hey, main is subah jo kiya tha usko wapas karna chahta hoon."
+1754,1754_2,cancel_transfer,pending_card_payment,0.028803105930684633,0.532725697832681,mixed,Can I change the amount I paid on a payment? The payment is sahi.
+1754,1754_1,cancel_transfer,pending_card_payment,0.04131016833493276,0.4270011883162516,noisy,Mn jo paymnt kiya uska amt chnge kar sakta hoon? Paymnt bilkul sahi hai.
+1754,1754_0,cancel_transfer,other,0.06409270983524139,0.38209701507991656,casual,Maine jo payment kiya uska amount change kar sakta hoon? Payment bilkul sahi hai.
+1799,1799_1,compromised_card,declined_card_payment,0.10014379255033456,0.2276546343401911,noisy,Mra crd bna mr pssn ke us hua.
+1799,1799_2,compromised_card,compromised_card,0.7529715768055474,0.7529715768055474,mixed,My card was used without meri ijazat.
+1799,1799_0,compromised_card,compromised_card,0.7941533164807131,0.7941533164807131,casual,Mera card bina meri permission ke use ho gaya.
+1815,1815_1,compromised_card,extra_charge_on_statement,0.05078285070309501,0.4901831407150832,noisy,"Mne apne accnt me rndm purchs dkh, kya yeh hkhd hua?"
+1815,1815_0,compromised_card,extra_charge_on_statement,0.1611719929630437,0.5372619573360368,casual,"Maine apne account me random purchases dekhe, kya yeh hack hua?"
+1815,1815_2,compromised_card,extra_charge_on_statement,0.235985205846518,0.5123067310748873,mixed,"I see random purchases to my account, kya yeh hack hua?"
+1818,1818_1,compromised_card,card_not_working,0.048095671857288275,0.39980947874852607,noisy,Mra crd cmprmd
+1818,1818_0,compromised_card,compromised_card,0.3670291855923107,0.3670291855923107,casual,Mera card compromise ho gaya hai
+1818,1818_2,compromised_card,compromised_card,0.469014641860846,0.469014641860846,mixed,"My card has been compromised, kripya madad kare."
+1821,1821_1,compromised_card,other,0.1040745724103063,0.7660315881380373,noisy,Acc kaise frz krn?
+1821,1821_0,compromised_card,compromised_card,0.3991870813465667,0.3991870813465667,casual,Mera account kaise freeze karoon?
+1821,1821_2,compromised_card,compromised_card,0.40786642213306146,0.40786642213306146,mixed,"How do I freeze my account, kripya?"
+1839,1839_1,pending_card_payment,declined_card_payment,0.06715477069654739,0.7873154948732795,noisy,Kse mn card paymnt finlize krn?
+1839,1839_0,pending_card_payment,declined_card_payment,0.1505078460057216,0.514263198055976,casual,Kaise main card payment finalize karun?
+1839,1839_2,pending_card_payment,pending_card_payment,0.40645923483320656,0.40645923483320656,mixed,"How do I finalize a card payment, bhai?"
+1841,1841_1,pending_card_payment,declined_card_payment,0.018885823083281215,0.9465915352776493,noisy,"Bhai, mra pmt kyun fail ho gya?"
+1841,1841_0,pending_card_payment,declined_card_payment,0.02976704419700859,0.9633460177405537,casual,"Bhai, mera payment kyun fail ho gaya?"
+1858,1858_1,pending_card_payment,card_not_working,0.08726353585114546,0.3210377209122125,noisy,bhai card trnsctns kitne din me clr hote hai?
+1858,1858_0,pending_card_payment,other,0.11003112224810259,0.2267599062364988,casual,"Hey, card transactions kitne din mein clear hote hain?"
+1858,1858_2,pending_card_payment,transfer_not_received_by_recipient,0.13505059841572,0.23535914252772117,mixed,"How long do card transactions take to clear, bhai?"
+1862,1862_2,pending_card_payment,other,0.035773112931569456,0.6645339646410829,mixed,"I was double charged, and the second charge is showing as 'pending'. How long will it be before I get my paisa back once the second charge has been refunded?"
+1862,1862_0,pending_card_payment,other,0.0849913218755132,0.6722022715179435,casual,"Mujhe double charge hua, second charge pending dikh raha hai. Kitne din lagenge refund hone mein?"
+1862,1862_1,pending_card_payment,extra_charge_on_statement,0.11459906972837874,0.3190054953383097,noisy,"Mujh double chrg hua, second chrg pndng dikh raha hai. Kmt din lagge refund hon?"
+1887,1887_1,declined_card_payment,other,0.12126014243499851,0.38146442050430474,noisy,Mre nwy crd kps gtn dcln. I ws vry excited t us it fr th frst tm tdy. Wy s ths dng ths?
+1887,1887_2,declined_card_payment,declined_card_payment,0.3750159994284656,0.3750159994284656,mixed,My new card keeps getting declined. I was very excited to use it for the first time today. Yeh kya ho raha hai?
+1887,1887_0,declined_card_payment,declined_card_payment,0.684346012209039,0.684346012209039,casual,Mera naya card baar baar decline ho raha hai. Aaj pehli baar use karne ko bahut excited tha. Kya ho raha hai?
+1899,1899_2,declined_card_payment,card_not_working,0.08405161813073032,0.5328922098120795,mixed,"My card was not accepted, please help. Shukriya."
+1899,1899_0,declined_card_payment,card_not_working,0.14071180757443244,0.7660711533117825,casual,Mera card accept nahi hua.
+1899,1899_1,declined_card_payment,card_not_working,0.2543365462532375,0.3155371719434969,noisy,Mra crd accpt nht
+1973,1973_1,top_up_failed,transfer_not_received_by_recipient,0.003334613758673668,0.39407591371669504,noisy,Mera card me paise trnsfr n h.
+1973,1973_0,top_up_failed,transfer_not_received_by_recipient,0.009158322025867116,0.6079444644928732,casual,Mera card pe paisa transfer nahi hua.
+1973,1973_2,top_up_failed,pending_card_payment,0.2355892343533298,0.4382151526595325,mixed,"My funding to my card didn't go through, bhai."
+1991,1991_2,top_up_failed,card_not_working,0.05060408376493032,0.6684105488846004,mixed,"I really need money from my card today, but my card is getting declined. Kripya help!!"
+1991,1991_0,top_up_failed,card_not_working,0.2488129699368149,0.331987054335975,casual,"Mujhe aaj card se paisa chahiye, lekin card reject ho raha hai. Kripya madad karo!!"
+1991,1991_1,top_up_failed,top_up_failed,0.3514941954574502,0.3514941954574502,noisy,"Mjh aaj card se paisa chahiye, lekin card rjct ho rha hai. Plz help!!"
+1997,1997_1,other,transfer_fee_charged,0.08603770199821237,0.41889664725569375,noisy,mre trnsfr fial kyun?
+1997,1997_0,other,transfer_fee_charged,0.1274236385911151,0.451583138386326,casual,Mera transfer fail hua kyun?
+1997,1997_2,other,transfer_fee_charged,0.2665569508315775,0.44070122967221753,mixed,"My transfer failed, kyun?"
+2004,2004_0,other,top_up_failed,0.024948749924450665,0.782308456418535,casual,My top-up abhi pending hai
+2004,2004_1,other,top_up_failed,0.07362765169333221,0.6745584590750626,noisy,M topup stll pndng
+2004,2004_2,other,top_up_failed,0.28001260619503887,0.5290940251918608,mixed,"My top-up is still pending, kripya check kare"
+2010,2010_1,other,cancel_transfer,0.011123681904929385,0.9624527993651284,noisy,Mujh order cancel krna h.
+2010,2010_2,other,cancel_transfer,0.013916987257686957,0.9403267299621835,mixed,"I would like to cancel my order, kripya."
+2010,2010_0,other,cancel_transfer,0.08929053152372868,0.8069755064378832,casual,Mujhe apna order cancel karna hai.
+2012,2012_2,other,declined_card_payment,0.13565612851379916,0.6091527452348506,mixed,"I see a direct debit payment on my app, but I don't recognize it, mujhe yeh payment samajh nahi aa raha."
+2012,2012_1,other,other,0.33460585062679393,0.33460585062679393,noisy,"Dirct dbt ka pmnt app me dkh rha h, par main use pehchan nhi sakta."
+2012,2012_0,other,other,0.8116082858736194,0.8116082858736194,casual,"Direct debit ka payment app me dikh raha hai, par main use pehchan nahi sakta."
+2015,2015_1,other,cancel_transfer,0.11779758327255142,0.1838273757117554,noisy,I wnt a rfdn on ths.
+2015,2015_0,other,other,0.622228046742385,0.622228046742385,casual,I want refund on this.
+2015,2015_2,other,other,0.7444258925794147,0.7444258925794147,mixed,"I want a refund on this, kripya."
+2016,2016_1,other,transfer_not_received_by_recipient,0.0038703708069726278,0.663397949836414,noisy,"Mn trnsfr bheja tha, ab pending hai. Kya ho rha hai? Kitna time lag rha hai?"
+2016,2016_2,other,transfer_not_received_by_recipient,0.009627209837758987,0.7773637138075936,mixed,I submitted my transfer but it's pending for a while. Kya time lag raha hai? Why hasn't it completed?
+2016,2016_0,other,transfer_not_received_by_recipient,0.01980333049508383,0.6155401962004963,casual,"Maine transfer bhej diya tha, ab pending hai. Kya chal raha hai? Kitna time lag raha hai?"
+2019,2019_0,other,lost_or_stolen_card,0.0865485009728016,0.34338683831596845,casual,Mujhe credit card ka brand choose karna padega?
+2019,2019_2,other,card_arrival,0.1770903690272462,0.31255910121152713,mixed,"Do I have to pick a credit card brand, bhai?"
+2019,2019_1,other,lost_or_stolen_card,0.23048840910456556,0.28313774276965026,noisy,kya mujhe crd crt brnd choose krna hoga?
+2026,2026_1,other,transfer_fee_charged,0.08078759962073281,0.7608039789730192,noisy,intl crd se money add krne par kitni fee lagti h?
+2026,2026_0,other,transfer_fee_charged,0.123746275718502,0.6833846598218111,casual,International card se money add karne par kitni fees lagti hai?
+2026,2026_2,other,transfer_fee_charged,0.1410050871801524,0.7116650376753266,mixed,What fees are there for adding money using an international card? Kaun se fees lagti hain?
+2028,2028_0,other,card_not_working,0.015980598911248794,0.8683035092662676,casual,Mera card activation ka process kaam nahi kar raha.
+2028,2028_1,other,card_not_working,0.036922352530160726,0.462106068442476,noisy,Mra card actvtn prcs nst wkng.
+2028,2028_2,other,card_not_working,0.056647994183057,0.821919123768605,mixed,"The card activation process is not working, bhai."
+2031,2031_1,other,pending_card_payment,0.09177429901560513,0.35630279798769643,noisy,"mne abhi apne acnt mn ek pmt dkhha jo mnne kbhi kiya nhi. kya mn abhi b dispute kr skta hoon, even tho it was a couple of months ago?"
+2031,2031_0,other,pending_card_payment,0.1937635861994034,0.28918933870308255,casual,"Maine abhi apne account mein ek payment dekha jo mainne kabhi kiya nahi. Kya main abhi bhi dispute kar sakta hoon, even though it was a couple of months ago?"
+2031,2031_2,other,pending_card_payment,0.2765847005265198,0.2823840455675776,mixed,I just found a payment in my account that I didn't make. Can I still dispute it even though it was a couple of months ago? Kya yeh still possible hai?
+2034,2034_2,other,lost_or_stolen_card,0.07408714809575095,0.29976556536607074,mixed,"I found my card that I thought I had lost, I need to reactivate it, kripya madad karein."
+2034,2034_1,other,lost_or_stolen_card,0.22040513747406953,0.28411214211417596,noisy,"Mn apna card ml gya jo mn khoya samjh rha tha, ab use re-activate karwana hai, pls madad."
+2034,2034_0,other,lost_or_stolen_card,0.24474363784100198,0.38183886619644736,casual,"Maine apna card mil gaya jo main kho gaya samajh raha tha, ab use reactivate karwana hai, madad karo please."
+2037,2037_2,other,declined_card_payment,0.05511291511223639,0.3775703266528305,mixed,"Please double check my card - withdrawal was working fine so far, but this morning on the way to work it suddenly got declined! Kya hua?"
+2037,2037_1,other,declined_card_payment,0.07924950988259939,0.420253977367787,noisy,"Pls dpl chk my crd - wdrwl ws wrkng fn so fr, bt ths mrn on the way to wrk it suddnly gt dclnd!"
+2037,2037_0,other,top_up_failed,0.16075928047049262,0.28674672723692246,casual,"Mere card ki double check karo, pehle withdrawal theek chal raha tha, par aaj subah work jaate waqt suddenly declined ho gaya!"
+2038,2038_0,other,card_not_working,0.14740177021917408,0.4571354620899161,casual,Physical card ka price kitna hai?
+2038,2038_2,other,card_not_working,0.1487264334146743,0.6325043787644206,mixed,"What is the price for a physical card, bhai?"
+2038,2038_1,other,card_arrival,0.18014450632075868,0.4859072485238335,noisy,Physhl card k price kitna h?
+2051,2051_0,other,compromised_card,0.08567228854301608,0.30116805151673925,casual,Account ke liye second card dene ka option hai kya meri daughter ke liye?
+2051,2051_1,other,card_arrival,0.09589138520047172,0.36309839240250624,noisy,Is it possble to give 2nd card 4 this acc 2 my dtr?
+2051,2051_2,other,compromised_card,0.23756655674219385,0.2952043821426641,mixed,Can I get a second card for this account for my daughter? meri daughter ke liye?
+2053,2053_2,other,top_up_failed,0.10485227611273917,0.7467393645352347,mixed,Can a friend my account ko top up kare?
+2053,2053_1,other,top_up_failed,0.1155636136091381,0.7508138560369679,noisy,kya koi friend mera acc top up kr skta h?
+2053,2053_0,other,top_up_failed,0.19433669950935764,0.666833390674949,casual,Kya koi friend mera account top up kar sakta hai?
+2056,2056_0,other,top_up_failed,0.0012326463879380463,0.995166876676374,casual,"Hey, mera top up kaam nahi kar raha hai?"
+2056,2056_2,other,top_up_failed,0.007546198682194275,0.9752251477032979,mixed,"Is my top up not working, bhai?"
+2056,2056_1,other,top_up_failed,0.009947315900216512,0.9831386800151372,noisy,"hey, my top up kaam nhi kar rha?"
+2064,2064_1,other,card_arrival,0.1335735595456784,0.3922138376356182,noisy,Hw is th tp card vryf pls?
+2064,2064_0,other,other,0.8700659131622239,0.8700659131622239,casual,Top-up card ka verification kaise hota hai?
+2064,2064_2,other,other,0.8997678703884248,0.8997678703884248,mixed,"How is the top-up card verified, yaar?"
+2065,2065_2,other,transfer_fee_charged,0.137449085720343,0.3565460873661813,mixed,"Why did I not get the amount of money I requested, bhai?"
+2065,2065_0,other,other,0.3489190886170351,0.3489190886170351,casual,"Bhai, kyun mujhe woh paisa nahi mila jo maine maanga?"
+2065,2065_1,other,other,0.392696730496392,0.392696730496392,noisy,"Bh, kyun mai jo amt maanga tha usme paise nhi mila?"
+2068,2068_2,other,cancel_transfer,0.14006658548204073,0.3597169045605178,mixed,"I need to terminate my account, please close it immediately. Shukriya."
+2068,2068_0,other,cancel_transfer,0.15870558832669504,0.33418653033360723,casual,Mujhe apna account turant band karna hai.
+2068,2068_1,other,other,0.2822876493337774,0.2822876493337774,noisy,mjh apna acnt turnt bd krna hy.
+2069,2069_1,other,extra_charge_on_statement,0.12998550261220215,0.3602453512597006,noisy,"Hey, i ws at rstrnt ths wk nd gtt chrgd twx. Plz rmv 1 pmt frm my acct."
+2069,2069_2,other,pending_card_payment,0.16475809274211237,0.2978838904682523,mixed,I was at a restaurant this week and got charged twice. Could you please remove one of those payments from my account? Ek payment ko delete kar dein.
+2069,2069_0,other,other,0.2290232884366471,0.2290232884366471,casual,"Hey, main is week mein ek restaurant gaya tha aur do baar charge ho gaya. Ek payment ko remove kar dein please."
+2070,2070_1,other,lost_or_stolen_card,0.07652329937541541,0.5978367112710662,noisy,"Bz lgta hs koi mera card cln kr diya hoga. Card lost nhi hai, par ek 500$ cash withdraw chrg dekha. Kya aap madad kr sakte ho?"
+2070,2070_0,other,lost_or_stolen_card,0.2368715265722788,0.39740381687494014,casual,"Bas lagta hai koi mera card clone kar diya hoga. Card lost nahi hai, par ek 500$ cash withdrawal charge dekha. Kya aap madad kar sakte ho?"
+2070,2070_2,other,other,0.30420618942073485,0.30420618942073485,mixed,I think someone may have cloned my card or something. My card isn't lost but I just saw a charge of $500 cash withdraw. Kya aap help kar sakte ho?
+2071,2071_0,other,transfer_not_received_by_recipient,0.015483999275992876,0.7425731610229248,casual,"Hey, US se transfer ka wait kar raha hoon, kitna aur lag raha hai?"
+2071,2071_1,other,transfer_not_received_by_recipient,0.03506146808351104,0.7027077582092695,noisy,"hey, us se trnsfr ka wait kar rha hoon, kitna aur lag rha?"
+2071,2071_2,other,transfer_not_received_by_recipient,0.05872160935076325,0.7801940129195817,mixed,"I'm waiting for a transfer from the US, how much longer, yaar?"
+2075,2075_0,other,extra_charge_on_statement,0.008511501474858801,0.7410979757918664,casual,"Mere ko aapke store se kharidari karte waqt extra fee charge ho gaya, yeh kyon hua?"
+2075,2075_1,other,extra_charge_on_statement,0.016826696873397145,0.5576722168550697,noisy,"Mre ko apke store se khrdi karte wqt extra fee chrg ho gya, yeh kyun?"
+2075,2075_2,other,transfer_fee_charged,0.036775718526343,0.6191317094609504,mixed,"I was charged an extra fee while buying from your store, kyun?"
+2084,2084_0,other,lost_or_stolen_card,0.0018612746797468948,0.6874678647485761,casual,"Mera card freeze ho gaya, kya karun?"
+2084,2084_1,other,lost_or_stolen_card,0.002063690225673966,0.8150075921395221,noisy,"Mra card frz ho gya, kya karu?"
+2084,2084_2,other,card_not_working,0.23975734725203804,0.2889964411414012,mixed,"My card's frozen, kya kar sakta hoon?"
+2085,2085_0,other,card_arrival,0.008266025444701383,0.8821531467701361,casual,Kitna time lagta hai card aane me?
+2085,2085_2,other,card_arrival,0.02447593540068716,0.6251019438652411,mixed,How long does it take for the card to aane?
+2085,2085_1,other,card_arrival,0.027516550309265857,0.7504129167949753,noisy,kita tm lgt h card aane me?
+2090,2090_2,other,cancel_transfer,0.044842759971356276,0.33105251407454733,mixed,"I have an unknown charge, kripya transaction check kare."
+2090,2090_0,other,extra_charge_on_statement,0.05460975623136357,0.7022532676858184,casual,Mere account pe koi unknown charge aaya hai.
+2090,2090_1,other,extra_charge_on_statement,0.1198698435175541,0.5008955268195262,noisy,mre acc pt koi unknwn chrge aaya hai
+2102,2102_2,other,declined_card_payment,0.10249604218869142,0.3391295142944616,mixed,"I couldn't make a transfer because it was declined, yaar."
+2102,2102_0,other,declined_card_payment,0.11299604257087897,0.636173832846296,casual,"Transfer karne ki koshish ki, lekin reject ho gaya."
+2102,2102_1,other,declined_card_payment,0.15594102308880006,0.4895035629891223,noisy,"Trnsfr krne ki kshish ki, lekin rejct ho gya."
+2117,2117_1,other,pending_card_payment,0.057000253314260875,0.4306133977514299,noisy,"Maine trnsfr kiya, lekin abhi pending hai."
+2117,2117_0,other,transfer_not_received_by_recipient,0.05904456879946328,0.5732319024095386,casual,"Maine transfer kiya, lekin abhi bhi pending hai."
+2117,2117_2,other,pending_card_payment,0.1303663435476597,0.4288440862489062,mixed,"I did a transfer but it is still pending, bhai."
+2129,2129_0,other,compromised_card,0.040848544949460816,0.7458201054706511,casual,"Bhai, yeh bahut urgent hai. Kripya mera card abhi freeze kar dein. Koi ajeeb shehar se koi ne mera card use karke paise nikaale hain. Main khud koi paise nahi nikala."
+2129,2129_1,other,compromised_card,0.054141255287461484,0.6206448472665307,noisy,"Bh, yeh bahut urgent hai. Plz frz mr crd abhi. Koi odd remote tn se koi ne mr crd us kr paise nikaale hain. Mn khud koi paise nahi nikla."
+2129,2129_2,other,compromised_card,0.05432095088110167,0.8581122488814801,mixed,This is urgent. Please freeze my card now. As someone in some odd remote town has withdrawn some money using my card. Main khud koi paise nahi nikala.
+2132,2132_1,other,declined_card_payment,0.039480572321494864,0.48312964951404075,noisy,w hy u keep dclining my trnsfers? it wz alwys woking rly wl so far but whn I trd t buy smthin jus nw the card gt dclnd. I trd cll of tms alrdy but sm thing is hpnnng.
+2132,2132_0,other,declined_card_payment,0.08121296690377593,0.5301816391168886,casual,"Bhai, tum log transfer kaise decline karte rehte ho? Pehle theek se kaam kar raha tha, par ab jab maine kuch kharida, card reject ho gaya. Maine kuch baar try kiya, par same problem aa rahi hai."
+2134,2134_2,other,transfer_fee_charged,0.03359105519390227,0.5923503512989797,mixed,"Please tell me why I was charged a fee for using my card, batao."
+2134,2134_0,other,transfer_fee_charged,0.04764746021300666,0.782474273833521,casual,"Hey, batao mujhe card use karne par fee kyun charge hua?"
+2134,2134_1,other,transfer_fee_charged,0.08458783396512633,0.5531985100862616,noisy,"Hey, btl mo card us krn pr fee kyun chrge hua?"
+2140,2140_1,other,card_arrival,0.06109121664397883,0.6136781647258519,noisy,"Mjh sn ek ny card chhie, ord kaise krn?"
+2140,2140_0,other,card_arrival,0.07171958830685718,0.7535879110777899,casual,"Mujhe soon ek naya card chahiye, order kaise karun?"
+2140,2140_2,other,card_arrival,0.13534695630636628,0.670814034786566,mixed,"I need a new card soon, how do I order it? Process kya hai?"
+2145,2145_0,other,transfer_fee_charged,0.002339724553189664,0.9943165787703742,casual,Transfers ke liye koi charge hai kya?
+2145,2145_2,other,transfer_fee_charged,0.0025987663637474802,0.9934701086961507,mixed,"Is there a charge for transfers, koi fee?"
+2145,2145_1,other,transfer_fee_charged,0.018464377985782324,0.926344290521519,noisy,Trnsfrs ke liye koi chrge hai kyaa?
+2146,2146_1,other,top_up_failed,0.14887739667283928,0.18391013553938002,noisy,Mn trv actvng my bill f fare nd it ndidn't wrk.
+2146,2146_2,other,other,0.6401770120386764,0.6401770120386764,mixed,I tried activating my bill of fare but it didn't kaam.
+2146,2146_0,other,other,0.9008323338093712,0.9008323338093712,casual,"Maine apna bill of fare activate karne ki koshish ki, par kaam nahi kiya."
+2147,2147_1,other,lost_or_stolen_card,0.03125237606506511,0.6492395003863952,noisy,Mujh nayi card link krne me help chahiye
+2147,2147_2,other,lost_or_stolen_card,0.03719919326479823,0.3335003104586175,mixed,"I need help to link my new card, kripya madad kare."
+2147,2147_0,other,card_not_working,0.056557429298272115,0.307331161786521,casual,Mujhe apni nayi card link karne mein help chahiye.
+2148,2148_0,other,card_arrival,0.06728778837185753,0.6405952241356485,casual,Card ko kahaan bhejna hai?
+2148,2148_1,other,card_arrival,0.09625537396817402,0.45330961629830185,noisy,Card k hn bhejn hn?
+2148,2148_2,other,card_arrival,0.15353829708274977,0.7523018172161504,mixed,"Where do we mail the card, bhai?"
+2156,2156_1,other,compromised_card,0.0161324228335341,0.7318066093688824,noisy,Koi ne mera card accss kiya? App pe kuch paymnts dikh rahe hain jo maine nhi kiye.
+2156,2156_0,other,compromised_card,0.018947296778033612,0.5568383744382749,casual,Koi ne mera card access kiya? App pe kuch payments dikh rahe hain jo maine nahi kiye.
+2156,2156_2,other,compromised_card,0.08685327790903025,0.4196156510220463,mixed,"Has someone accessed my card? There are payments on the app that I didn't make, kaun is doing this?"
+2162,2162_0,other,top_up_failed,0.008605490442068157,0.9539245439634606,casual,"Bhai, Google Pay top-up ka kaam kyun nahi ho raha? Explain please."
+2162,2162_1,other,top_up_failed,0.03217410848887028,0.8505093647190539,noisy,"Bhai, Ggl Pay tpup ka kaam kyun n h rha? Plz explain."
+2162,2162_2,other,top_up_failed,0.07116183267209154,0.8519264796748437,mixed,Can you explain why my Google Pay Top-up is not working? Please batao.
+2166,2166_0,other,lost_or_stolen_card,0.07169330536224178,0.39362847193014017,casual,"Mujhe app use nahi ho rahi, mera phone hotel mein kho gaya hai."
+2166,2166_2,other,lost_or_stolen_card,0.08562859910137724,0.39054523219469073,mixed,"I can't use the app, mera phone hotel mein kho gaya hai."
+2166,2166_1,other,lost_or_stolen_card,0.12074850433094306,0.39665989154995096,noisy,"Mujh app use nhi ho rha, mera phn lo hotel me kho gya."
+2175,2175_2,other,card_arrival,0.004850639685507347,0.9352043184152925,mixed,When will I get my card? Card kab milega?
+2175,2175_0,other,card_arrival,0.07665098640306359,0.7523663447963369,casual,"Hey, card ko sabse jaldi kab milega?"
+2175,2175_1,other,card_arrival,0.10351456070318656,0.2960784871641693,noisy,Crd ko sbse jaldi kab mlg?
+2180,2180_2,other,transfer_not_received_by_recipient,0.02874169597030451,0.7195480905699438,mixed,"I bought something and already received it, but why hasn't the paisa been deducted?"
+2180,2180_1,other,transfer_not_received_by_recipient,0.220766341152428,0.2868030782210008,noisy,"Mne kuch kharid aur alredy mila, paisa ab tak nkal nhi gya?"
+2180,2180_0,other,other,0.34551063245807345,0.34551063245807345,casual,"Maine kuch kharida aur already mila, paisa ab tak nikal nahi gaya?"
+2183,2183_2,other,card_arrival,0.049009368691320186,0.8622777341460849,mixed,"I ordered a while back, what's the ETA in the US? (delivery ka time kya hai?)"
+2183,2183_0,other,card_arrival,0.05573078492782224,0.8723125004894082,casual,"Ordered thodi der pehle, US me delivery ka ETA kya hai?"
+2183,2183_1,other,other,0.4485321177886921,0.4485321177886921,noisy,"ordrd thodi der phele, US me dly ka ETA kya hai?"
+2190,2190_1,other,transfer_not_received_by_recipient,0.05866285436627631,0.3249144234687961,noisy,Mn trd trfr fnd t bnfclr nd w s dn. Cn u tll m y?
+2190,2190_2,other,transfer_fee_charged,0.05941163041463192,0.599678563264443,mixed,I tried to transfer funds to a beneficiary and it was denied. Can you bata why?
+2190,2190_0,other,other,0.28073363431134446,0.28073363431134446,casual,"Maine beneficiary ko paisa transfer karne ki koshish ki, lekin reject ho gaya. Kya bata sakte ho kyun?"

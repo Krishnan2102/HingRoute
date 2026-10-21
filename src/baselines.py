@@ -39,9 +39,9 @@ Customer message: "{text}"
 #1. Load train.csv, val.csv, and test.csv.
 def load_datasets() ->Tuple[pd.DataFrame,pd.DataFrame,pd.DataFrame]:
     """ Loads processed splits from data/processes/."""
-    train_df=pd.read_csv("data/processed/train.csv")
-    val_df=pd.read_csv("data/processed/val.csv")
-    test_df=pd.read_csv("data/processed/test.csv")
+    train_df=pd.read_csv("data/processed/train_clean.csv")
+    val_df=pd.read_csv("data/processed/val_clean.csv")
+    test_df=pd.read_csv("data/processed/test_clean.csv")
     return train_df,val_df,test_df
 #2. Train Majority Predictor -> evaluate on val and test using evaluate_predictions().
 def run_majority_baseline(train_df:pd.DataFrame,test_df:pd.DataFrame)->Dict[str,Any]:

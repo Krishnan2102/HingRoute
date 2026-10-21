@@ -106,7 +106,6 @@ id,orig_id,text,label,style,split
 214_2,214,I see a 1L charge on my statement but I don't recognize it. Yeh kaise hua?,extra_charge_on_statement,mixed,val
 238_0,238,Extra pound charge kyun hua?,extra_charge_on_statement,casual,val
 238_1,238,Exra pnd chrge kyun?,extra_charge_on_statement,noisy,val
-238_2,238,"Why was I charged an extra pound, bhai?",extra_charge_on_statement,mixed,val
 246_0,246,Mujhe thodi help chahiye samajhne ke liye ki yeh strange payment mera account pe kaun sa hai. Yeh pending rehta hai aur nahi jaata.,extra_charge_on_statement,casual,val
 246_1,246,Mujh thodi hlp chhahiye samajhne ke liye ki yeh strnge paymnt mera acnt pe kaun sa hai. Yh pending rehta hai aur nahi jaata.,extra_charge_on_statement,noisy,val
 246_2,246,I need some help figuring out what this strange payment is on my account. Yeh pending rehta hai aur nahi jaata.,extra_charge_on_statement,mixed,val
@@ -258,7 +257,6 @@ id,orig_id,text,label,style,split
 550_0,550,Mujhe pehle ki transaction cancel karni hai.,cancel_transfer,casual,val
 550_1,550,I trxn cncl krna chahta hu jo maine phle kiya.,cancel_transfer,noisy,val
 550_2,550,"I want to cancel the transaction I did earlier, kripya sahayata.",cancel_transfer,mixed,val
-561_0,561,Transaction cancel kaise karein?,cancel_transfer,casual,val
 561_1,561,Trxn cncl kaise krn?,cancel_transfer,noisy,val
 561_2,561,"How to cancel a transaction, kripya?",cancel_transfer,mixed,val
 563_0,563,"Bhai, transfer cancel karna hai, help karo.",cancel_transfer,casual,val
@@ -267,8 +265,6 @@ id,orig_id,text,label,style,split
 567_0,567,"Bhai, agar galti ho jaye toh transaction cancel kar sakte hain?",cancel_transfer,casual,val
 567_1,567,if i mk a mstk cn i cncl th trnsctn?,cancel_transfer,noisy,val
 567_2,567,"If I make a mistake, can I cancel the transaction? Agar galti ho jaye?",cancel_transfer,mixed,val
-570_0,570,Transfer cancel kaise karun?,cancel_transfer,casual,val
-570_1,570,Trnsfr cncl kaise krn?,cancel_transfer,noisy,val
 570_2,570,"How do I cancel a transfer, bhai?",cancel_transfer,mixed,val
 572_0,572,Transfer cancel karne ke liye main kisko call karun?,cancel_transfer,casual,val
 572_1,572,Trnsfr cncl krne ke liye kaun se num pe call karna chahiye?,cancel_transfer,noisy,val
@@ -530,7 +526,6 @@ id,orig_id,text,label,style,split
 1139_0,1139,"Hey, mera card ka status theek hai kya? Mujhe kaafi 'decline' messages mil rahe hain.",declined_card_payment,casual,val
 1139_1,1139,"hlo, mr cdr ka status theek hai ky? mujhe kaafi 'declne' msg mil rahe hn.",declined_card_payment,noisy,val
 1139_2,1139,"Hi, is everything in good standing with my card? I am getting multiple 'decline' messages, kya ho raha hai?",declined_card_payment,mixed,val
-1141_0,1141,Mera card ka payment fail ho gaya.,declined_card_payment,casual,val
 1141_1,1141,Mre crd pmt ndnt g thrgh.,declined_card_payment,noisy,val
 1141_2,1141,"My card payment didn't go through, bhai.",declined_card_payment,mixed,val
 1144_0,1144,"Mera payment kyun decline hua? Main baar baar card try kar raha hoon, par kaam nahi kar raha.",declined_card_payment,casual,val
@@ -551,9 +546,7 @@ id,orig_id,text,label,style,split
 1186_0,1186,Main kaafi sharminda tha. Mera payment kyun clear nahi hua?,declined_card_payment,casual,val
 1186_1,1186,M kafi shrmnda tha. Mera payment kyun clr nhi hua?,declined_card_payment,noisy,val
 1186_2,1186,"I was so embarrassed. Why didn't my payment clear, bhai?",declined_card_payment,mixed,val
-1187_0,1187,Mera card payment kaam nahi kar raha hai.,declined_card_payment,casual,val
 1187_1,1187,mr card paymt nd wrok n,declined_card_payment,noisy,val
-1187_2,1187,"My card payment didn't work, bhai.",declined_card_payment,mixed,val
 1190_0,1190,"Mere card payment kaam nahi kar raha, kya karun?",declined_card_payment,casual,val
 1190_1,1190,"Mre card paymnt nht wrkd, wht cn I d 2 lk into t?",declined_card_payment,noisy,val
 1190_2,1190,"For some reason my card payment hasn't worked, what can I do to look into that? (kya karna hai?)",declined_card_payment,mixed,val
@@ -605,7 +598,6 @@ id,orig_id,text,label,style,split
 1299_0,1299,"Maine transfer free samjhe the, par charge kyun hua?",transfer_fee_charged,casual,val
 1299_1,1299,"mn shc transfars fr, pr chrg kyun?",transfer_fee_charged,noisy,val
 1299_2,1299,"I thought transfers were free, why was I charged? Yeh fee kaun sa hai?",transfer_fee_charged,mixed,val
-1300_0,1300,Transfer karte waqt extra charges kyun lag rahe hain?,transfer_fee_charged,casual,val
 1300_1,1300,Trnsfr krte wkt exta chrg kyun lag rahe?,transfer_fee_charged,noisy,val
 1300_2,1300,"Why were there additional charges when I transferred funds, bhai?",transfer_fee_charged,mixed,val
 1310_1,1310,"I mde a trnsfr an d the rcvr sd they hvn't actlly rcvd the rt amt, bt its a bt lss. Nw I hv t trnsfr mrr mny to mk up fr th mssng bit. Cn u pls llrt m bout ths, wht hs bn gng on?",transfer_fee_charged,noisy,val
@@ -745,7 +737,6 @@ id,orig_id,text,label,style,split
 1590_0,1590,Kya card jo bheja hai uska track karne ka koi tareeka hai?,card_arrival,casual,val
 1590_1,1590,ky cd jo bheja h uska trck krne ka koi tareeka h?,card_arrival,noisy,val
 1590_2,1590,Does the card you sent have a way to track it? Kya koi tracking option available hai?,card_arrival,mixed,val
-1595_0,1595,Card ka tracking number kahan hai?,card_arrival,casual,val
 1595_1,1595,Crd ka trckng nr kahan hai?,card_arrival,noisy,val
 1595_2,1595,Where is the tracking number for the card you sent me? Card ka tracking number kahan hai?,card_arrival,mixed,val
 1604_0,1604,Statement mein extra charges kyun aa rahe hain?,extra_charge_on_statement,casual,val
@@ -853,7 +844,6 @@ id,orig_id,text,label,style,split
 1881_0,1881,Mera card shop mein decline ho gaya,declined_card_payment,casual,val
 1881_1,1881,Mera card shopp mei dcld ho gya,declined_card_payment,noisy,val
 1881_2,1881,My card shop mein decline ho gaya,declined_card_payment,mixed,val
-1883_0,1883,Mera card reject ho gaya,declined_card_payment,casual,val
 1883_1,1883,M card dcln,declined_card_payment,noisy,val
 1883_2,1883,My card reject ho gaya,declined_card_payment,mixed,val
 1886_0,1886,Mere card pe transaction kyun declined ho gaya?,declined_card_payment,casual,val
