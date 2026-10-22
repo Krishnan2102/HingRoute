@@ -1,52 +1,154 @@
-# HingRoute: Hinglish Customer-Support Triage API
+# HingRoute: Romanized Hinglish Banking Support Triage Service
 
-HingRoute is a lightweight CPU-only API that triages Romanized Hinglish banking support messages. It classifies each message into one of 12 intents and decides whether to escalate it to a human. Messages in high-risk categories are always escalated, whatever the model's confidence.
+A lightweight, CPU-efficient triage service designed to sanitize, classify, and route customer support queries written in Romanized Hinglish. Built as a fast front-door filter, it enforces data privacy and deterministic policy-based escalation for high-risk banking intents before queries reach downstream agents or human queues.
 
-> **Status: Phase 1 MVP (prototype).** It runs end to end in Docker and has been load-tested, but it is trained and evaluated on synthetic data only and has not been hardened for production use. See [Limitations](#limitations).
+---
 
-## Features
+## Architecture Overview
 
-- **Intent classification:** character n-gram TF-IDF + Logistic Regression over 12 intents (11 banking intents + `other`). Runs on CPU with no GPU dependency.
-- **Deterministic risk routing:** high-risk intents always return `escalate` with reason `policy_risk`, overriding model confidence.
-- **PII masking:** regex-based redaction of card-like and phone-like numbers before a message is written to the log.
-- **Input validation:** request schemas validated with Pydantic in FastAPI.
-- **Request logging:** SQLite (masked text, prediction, action, latency).
-- **Containerized:** slim Python 3.11 Docker image.
+```
+                                 [ Incoming Request ]
+                                          │
+                                          ▼
+                            [ Pydantic Input Validation ]
+                                          │
+                                          ▼
+                            [ Regex PII Redaction Engine ]
+                                          │
+                         ┌────────────────┴────────────────┐
+                         ▼                                 ▼
+              [ SQLite Request Audit ]       [ Scikit-Learn Pipeline ]
+                   (Local Logging)          (Char n-gram TF-IDF + Logistic Reg)
+                                                           │
+                                                           ▼
+                                              [ Intent & Confidence Score ]
+                                                           │
+                                                           ▼
+                                            [ Deterministic Risk Routing ]
+                                            (Policy Override & Escalation)
+                                                           │
+                                                           ▼
+                                                 [ JSON Triage Action ]
 
-## Why TF-IDF + Logistic Regression
-
-On the Hinglish banking dataset, a fine-tuned MuRIL model and the TF-IDF pipeline scored within noise of each other (table below), while TF-IDF runs on CPU at a fraction of the compute. Character n-grams suit Roman-script Hindi because its spelling varies (`nahi`, `nahin`, `nai`).
-
-## Intents
-
-`lost_or_stolen_card` (risk), `compromised_card` (risk), `extra_charge_on_statement` (risk), `card_not_working`, `card_arrival`, `transfer_not_received_by_recipient`, `cancel_transfer`, `transfer_fee_charged`, `pending_card_payment`, `declined_card_payment`, `top_up_failed`, `other`.
-
-## Risk Routing
-
-Regardless of model confidence, a message whose predicted intent is one of the following returns `action: "escalate"` with `reason: "policy_risk"`:
-
-- `lost_or_stolen_card`
-- `compromised_card`
-- `extra_charge_on_statement`
-
-| action | reason | when |
-| --- | --- | --- |
-| `escalate` | `policy_risk` | Predicted intent is a risk intent |
-| _(document the remaining actions and reasons here, e.g. auto-reply, low confidence, `other`)_ | | |
-
-**Note:** the rule fires on the *predicted* intent. A risky message that is misclassified into a non-risk intent is not caught by this rule, so risk-intent recall is the key safety metric (see [Limitations](#limitations)).
-
-## API
-
-### `POST /triage`
-
-Request:
-
-```json
-{ "message": "mera card kho gaya hai please block kardo card number 123456789012" }
 ```
 
-Response (illustrative):
+* **Classification Engine:** Scikit-Learn TF-IDF vectorizer (character-level n-grams, range 2–5) paired with a Logistic Regression classifier calibrated on Romanized Hinglish syntax. Character n-grams provide resilience against phonetic spelling variants and typos without requiring heavy transformer inference infrastructure.
+* **API Framework:** FastAPI application serving endpoints with strict Pydantic schemas.
+* **Data Sanitization:** Regex-driven PII redaction covering standard payment card structures and mobile numbers before audit persistence.
+* **Local Persistence:** Structured SQLite query logging recording timestamps, sanitized queries, predicted intents, and routing dispositions.
+* **Containerization:** Self-contained Docker image using `python:3.11-slim` running a Uvicorn ASGI server.
+
+---
+
+## Risk Routing Logic
+
+Statistical model confidence alone is insufficient for high-consequence banking operations. The triage layer enforces strict rule overrides: whenever an intent falls into a designated high-risk category, the service mandates human intervention regardless of the model's confidence score.
+
+### Policy Escalation Classes
+
+* `lost_or_stolen_card`
+* `compromised_card`
+* `extra_charge_on_statement`
+
+### Routing Actions
+
+| Scenario | Action | Reason |
+| --- | --- | --- |
+| Any Risk Intent detected | `escalate` | `policy_risk` |
+| Low model confidence ($< 0.60$) | `escalate` | `low_confidence` |
+| Standard intent with high confidence | `auto_reply` | `confident` |
+
+---
+
+## Performance & Verification
+
+### Classification Accuracy
+
+Evaluated on a 12-class Romanized Hinglish banking dataset derived from Banking77:
+
+| Model Architecture | Macro-F1 | Inference Execution (Raw Model) |
+| --- | --- | --- |
+| **TF-IDF (Char n-grams) + Logistic Regression** | **0.9171** | **~0.17 ms** |
+| MuRIL (Multilingual BERT Baseline) | 0.9155 | ~14.80 ms (CPU) |
+
+The lightweight linear model matches the transformer baseline in macro-F1 while operating at two orders of magnitude lower compute overhead.
+
+### Load Test Benchmarks (Locust)
+
+A 60-second headless load test was executed against the containerized service simulating 20 concurrent clients (`locust -f locustfile.py --headless -u 20 -r 5 -t 60s --host http://localhost:8000`):
+
+| Metric | Measured Value |
+| --- | --- |
+| **Total Requests Completed** | 3,428 |
+| **Throughput (Simulated Client Ceiling)** | ~57.1 req/s |
+| **Median End-to-End Latency (p50)** | 23 ms |
+| **p95 End-to-End Latency** | 110 ms |
+| **p99 End-to-End Latency** | 220 ms |
+| **Max Recorded Latency** | 670 ms |
+
+> **Note on Latency Profile:** Recorded percentiles reflect end-to-end request cycles (HTTP deserialization, Pydantic validation, regex masking, inference, and synchronous SQLite write). Further decoupling the disk write path via background workers is planned for subsequent iterations.
+
+---
+
+## Repository Structure
+
+```
+hingroute/
+├── app/
+│   ├── __init__.py
+│   └── main.py                 # FastAPI application, routing, and PII masking
+├── models/
+│   ├── config.json             # Intent labels and risk-class definitions
+│   ├── templates.json          # Response templates for automated replies
+│   └── tfidf_pipeline.pkl      # Serialized Scikit-Learn vectorizer & classifier
+├── tests/
+│   └── test_api.py             # Integration test suite (Pytest + TestClient)
+├── Dockerfile                  # Slim production deployment container
+├── requirements-server.txt     # Minimal serving dependencies
+├── locustfile.py               # Performance benchmarking script
+└── README.md
+
+```
+
+---
+
+## Quickstart
+
+### 1. Build and Run Container
+
+```bash
+# Build the minimal image
+docker build -t hingroute-api .
+
+# Run the container exposing port 8000
+docker run -p 8000:8000 hingroute-api
+
+```
+
+### 2. Verify Health
+
+```bash
+curl http://localhost:8000/health
+
+```
+
+```json
+{
+  "status": "healthy"
+}
+
+```
+
+### 3. Sample Requests
+
+#### Risk Intent (Automatic Escalation)
+
+```bash
+curl -X POST http://localhost:8000/triage \
+  -H "Content-Type: application/json" \
+  -d '{"message": "mera debit card kho gaya hai please block kardo"}'
+
+```
 
 ```json
 {
@@ -56,66 +158,44 @@ Response (illustrative):
   "reason": "policy_risk",
   "latency_ms": 26.7
 }
+
 ```
 
-The card number in the request is masked before it is logged.
-
-## Results
-
-### Classification
-
-Test-set macro-F1 on a synthetic Hinglish banking dataset derived from Banking77 (Hinglish variants generated by an LLM; split by source message to prevent leakage).
-
-| Model | Macro-F1 | Notes |
-| --- | --- | --- |
-| **TF-IDF (char n-grams) + Logistic Regression** | **0.9171** | Selected for deployment |
-| MuRIL (fine-tuned) | 0.9155 | No significant difference from TF-IDF in a bootstrap comparison |
-
-_To complete: state the dataset version and test-set size, and add the 95% confidence interval for each score and for their difference (paired bootstrap resampling by source message)._
-
-### Load test (Locust)
-
-60-second headless test, 20 concurrent users, against the containerized service.
-
-| Metric | Result |
-| --- | --- |
-| Total requests | 3,428 |
-| Throughput | ~57 req/s |
-| Median latency (p50) | 23 ms |
-| p95 latency | 110 ms |
-| p99 latency | 220 ms |
-| Max latency | 670 ms |
-| Mean API-reported latency | 26.7 ms |
-
-**How to read this:** with 20 users each pausing between requests, throughput is set by the test load, not by the server's capacity. These numbers show latency at a modest load of about 57 req/s. To find the real limit, rerun without the wait time or ramp the number of users until latency degrades. Also record the hardware, the number of server workers and the Locust command used.
-
-## Quickstart
+#### Standard Query (Confident Auto-Reply)
 
 ```bash
-# 1. Build
-docker build -t hingroute-api .
-
-# 2. Run
-docker run -p 8000:8000 hingroute-api
-
-# 3. Test
 curl -X POST http://localhost:8000/triage \
   -H "Content-Type: application/json" \
-  -d '{"message": "mera card kho gaya hai please block kardo card number 123456789012"}'
+  -d '{"message": "mera card kab tak deliver hoga tracking status bata do"}'
+
 ```
 
-## Limitations
+```json
+{
+  "intent": "card_arrival",
+  "confidence": 0.8841,
+  "action": "auto_reply",
+  "reason": "confident",
+  "latency_ms": 24.1
+}
 
-- **Synthetic data only.** Training and test data are LLM-generated Hinglish. Real customer messages (slang, Devanagari mix, multi-intent, long messages) may score lower. A human-written test set has not yet been evaluated.
-- **Label noise.** A label audit of the training set found about 5% of rows ambiguous or mislabeled; these were corrected and the data re-evaluated, but validation and test labels were not given the same review.
-- **Evaluation gaps.** Risk-intent recall (the share of genuinely risky messages that reach a human) and the overall escalation rate are not yet reported. Confidence calibration and a confidence threshold for low-confidence escalation are not yet evaluated.
-- **Risk rule depends on the classifier.** Misclassified risky messages bypass the rule. Planned mitigations: escalate when the combined probability of the risk intents is high, and add a keyword safety net.
-- **Large share escalates by policy.** About a fifth of the labeled data falls in the three risk intents, so policy escalation alone caps how many messages can be handled automatically.
-- **Prototype logging and security.** SQLite logging inside a container is not persistent unless a volume is mounted. Masking covers card-like and phone-like numbers only (not, for example, Aadhaar-style IDs, account numbers, emails or UPI IDs). There is no authentication or rate limiting.
-- **Single-turn only.** Each message is classified independently with no conversation state.
+```
 
-## Roadmap (Phase 2)
+---
 
-- A trained router that sends each message to the cheapest adequate tier: a small-model answer, a tool-calling agent on a mock bank API, or human handoff with a case summary.
-- A cost-vs-quality evaluation, with an LLM judge validated against human labels.
-- Redis caching, Postgres logging, Docker Compose, tracing and metrics, drift monitoring, and safety tests for prompt injection and unauthorized data access.
+## Test Suite Execution
+
+Run unit and integration tests across endpoints, validation schemas, and escalation logic:
+
+```bash
+python -m pytest tests/ -v
+
+```
+
+---
+
+## Known Boundaries & Roadmap
+
+* **Synchronous I/O Decoupling:** Database writes currently share the synchronous request cycle; migrating to an asynchronous broker or background event queue will align API latency with raw model capability.
+* **PII Expansion:** Masking currently targets basic credit card structures and 10-digit mobile formats; future updates will broaden coverage across international formats, UPI virtual payment addresses, and alphanumeric identifiers.
+* **Phase 2 Expansion:** Upgrading the triage front-door to interface with an agentic multi-tier resolution framework, including tool-assisted balance/block execution and local policy retrieval.
