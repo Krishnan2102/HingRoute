@@ -1,75 +1,121 @@
-# Hinglish Banking Intent Classifier: Architectural Shootout
+# HingRoute: Hinglish Customer-Support Triage API
 
-A machine learning pipeline that classifies noisy, transliterated Hinglish banking queries into 12 customer-service intents. The project benchmarks a lightweight linear baseline against zero-shot LLM prompting and fine-tuned multilingual transformers, to find the best trade-off between accuracy, compute cost, and inference latency.
+HingRoute is a lightweight CPU-only API that triages Romanized Hinglish banking support messages. It classifies each message into one of 12 intents and decides whether to escalate it to a human. Messages in high-risk categories are always escalated, whatever the model's confidence.
 
-## Project Objective
+> **Status: Phase 1 MVP (prototype).** It runs end to end in Docker and has been load-tested, but it is trained and evaluated on synthetic data only and has not been hardened for production use. See [Limitations](#limitations).
 
-Do large multilingual transformers give enough of a performance edge on code-switched (Hindi-English) text classification to justify their computational requirements and GPU dependency, compared with a character-level classical approach?
+## Features
 
-## Dataset
+- **Intent classification:** character n-gram TF-IDF + Logistic Regression over 12 intents (11 banking intents + `other`). Runs on CPU with no GPU dependency.
+- **Deterministic risk routing:** high-risk intents always return `escalate` with reason `policy_risk`, overriding model confidence.
+- **PII masking:** regex-based redaction of card-like and phone-like numbers before a message is written to the log.
+- **Input validation:** request schemas validated with Pydantic in FastAPI.
+- **Request logging:** SQLite (masked text, prediction, action, latency).
+- **Containerized:** slim Python 3.11 Docker image.
 
-Synthetic banking queries written in Romanized Hinglish (for example *"mera card block ho gaya hai"*, *"nayi checkbook kaise mangwau"*), mapped to 12 intents such as `card_arrival`, `lost_or_stolen_card`, and `compromised_card`. The text is informal, with inconsistent and phonetic spellings.
+## Why TF-IDF + Logistic Regression
 
-- Splits: `train.csv`, `val.csv`, `test.csv` in `data/processed/`
-- Metric: macro-F1 on the held-out test split
+On the Hinglish banking dataset, a fine-tuned MuRIL model and the TF-IDF pipeline scored within noise of each other (table below), while TF-IDF runs on CPU at a fraction of the compute. Character n-grams suit Roman-script Hindi because its spelling varies (`nahi`, `nahin`, `nai`).
 
-## The Architectural Shootout
+## Intents
 
-Three paradigms were evaluated:
+`lost_or_stolen_card` (risk), `compromised_card` (risk), `extra_charge_on_statement` (risk), `card_not_working`, `card_arrival`, `transfer_not_received_by_recipient`, `cancel_transfer`, `transfer_fee_charged`, `pending_card_payment`, `declined_card_payment`, `top_up_failed`, `other`.
 
-1. **Lightweight baseline:** character n-gram TF-IDF + Logistic Regression. Character windows capture phonetic spelling variation at the sub-word level.
-2. **Zero-shot LLM:** a general-purpose LLM called through an API, with no task-specific training.
-3. **Transformer fine-tuning:**
-   - **XLM-RoBERTa** (`xlm-roberta-base`): multilingual transformer pre-trained on 100 languages.
-   - **MuRIL** (`google/muril-base-cased`): transformer pre-trained on Indian languages, including transliterated text.
+## Risk Routing
+
+Regardless of model confidence, a message whose predicted intent is one of the following returns `action: "escalate"` with `reason: "policy_risk"`:
+
+- `lost_or_stolen_card`
+- `compromised_card`
+- `extra_charge_on_statement`
+
+| action | reason | when |
+| --- | --- | --- |
+| `escalate` | `policy_risk` | Predicted intent is a risk intent |
+| _(document the remaining actions and reasons here, e.g. auto-reply, low confidence, `other`)_ | | |
+
+**Note:** the rule fires on the *predicted* intent. A risky message that is misclassified into a non-risk intent is not caught by this rule, so risk-intent recall is the key safety metric (see [Limitations](#limitations)).
+
+## API
+
+### `POST /triage`
+
+Request:
+
+```json
+{ "message": "mera card kho gaya hai please block kardo card number 123456789012" }
+```
+
+Response (illustrative):
+
+```json
+{
+  "intent": "lost_or_stolen_card",
+  "confidence": 0.9002,
+  "action": "escalate",
+  "reason": "policy_risk",
+  "latency_ms": 26.7
+}
+```
+
+The card number in the request is masked before it is logged.
 
 ## Results
 
-| Model | Test Macro-F1 | Inference Latency | Compute | Note |
-| --- | --- | --- | --- | --- |
-| **Char n-gram TF-IDF + LR** | 0.922 | **~0.17 ms/query** | CPU | **Selected for production** |
-| XLM-RoBERTa (fine-tuned) | **0.929** | _TBD (add measured value)_ | GPU | +0.7 pt macro-F1 over TF-IDF |
-| Zero-shot LLM | 0.916 | ~2879 ms/query | API / network | High latency and per-call cost |
-| MuRIL (fine-tuned) | 0.643 | _TBD (add measured value)_ | GPU | Did not converge in this setup |
+### Classification
 
-Latency measurements are in `results/latency_benchmark.csv`.
+Test-set macro-F1 on a synthetic Hinglish banking dataset derived from Banking77 (Hinglish variants generated by an LLM; split by source message to prevent leakage).
 
-## Decision and Conclusion
+| Model | Macro-F1 | Notes |
+| --- | --- | --- |
+| **TF-IDF (char n-grams) + Logistic Regression** | **0.9171** | Selected for deployment |
+| MuRIL (fine-tuned) | 0.9155 | No significant difference from TF-IDF in a bootstrap comparison |
 
-**Selected model: character n-gram TF-IDF + Logistic Regression.**
+_To complete: state the dataset version and test-set size, and add the 95% confidence interval for each score and for their difference (paired bootstrap resampling by source message)._
 
-XLM-RoBERTa has the highest macro-F1 (0.929 vs 0.922), but the 0.7-point gain does not justify its costs: it needs GPU infrastructure, adds substantial latency, and is a much larger model to deploy and maintain. The TF-IDF pipeline runs in well under a millisecond per query on a standard CPU, and its character n-grams handle Hinglish spelling variation well.
+### Load test (Locust)
 
-MuRIL, although pre-trained on Indian languages, reached only 0.643 macro-F1 and is treated as a failed run in this setup (see Limitations).
+60-second headless test, 20 concurrent users, against the containerized service.
 
-On this dataset, an optimized statistical model delivers nearly the same accuracy as a fine-tuned transformer at a tiny fraction of the cost and latency.
+| Metric | Result |
+| --- | --- |
+| Total requests | 3,428 |
+| Throughput | ~57 req/s |
+| Median latency (p50) | 23 ms |
+| p95 latency | 110 ms |
+| p99 latency | 220 ms |
+| Max latency | 670 ms |
+| Mean API-reported latency | 26.7 ms |
+
+**How to read this:** with 20 users each pausing between requests, throughput is set by the test load, not by the server's capacity. These numbers show latency at a modest load of about 57 req/s. To find the real limit, rerun without the wait time or ramp the number of users until latency degrades. Also record the hardware, the number of server workers and the Locust command used.
+
+## Quickstart
+
+```bash
+# 1. Build
+docker build -t hingroute-api .
+
+# 2. Run
+docker run -p 8000:8000 hingroute-api
+
+# 3. Test
+curl -X POST http://localhost:8000/triage \
+  -H "Content-Type: application/json" \
+  -d '{"message": "mera card kho gaya hai please block kardo card number 123456789012"}'
+```
 
 ## Limitations
 
-- **Synthetic data.** The dataset is synthetic, so scores are likely optimistic. Results on real customer messages may differ, and the ranking of models could change. A human-written held-out test set would be the next step.
-- **The 0.7-point gap may be noise.** Results come from a single split without confidence intervals or multiple seeds. Bootstrap CIs on the test set would show whether XLM-R and TF-IDF are statistically distinguishable.
-- **MuRIL's failure is unexplained.** A score this low, from a model pre-trained on transliterated Indian-language text, more likely points to a training-configuration issue (learning rate, epochs, label mapping, tokenization) than to a limit of the model. It should not be read as evidence that MuRIL cannot handle this domain until it is debugged.
-- **Transformer latency not yet reported.** Add measured ms/query for both transformers (and state the hardware) so the latency comparison is complete.
-- **Single domain.** Findings apply to this 12-intent banking task and may not generalize to other code-switched tasks.
+- **Synthetic data only.** Training and test data are LLM-generated Hinglish. Real customer messages (slang, Devanagari mix, multi-intent, long messages) may score lower. A human-written test set has not yet been evaluated.
+- **Label noise.** A label audit of the training set found about 5% of rows ambiguous or mislabeled; these were corrected and the data re-evaluated, but validation and test labels were not given the same review.
+- **Evaluation gaps.** Risk-intent recall (the share of genuinely risky messages that reach a human) and the overall escalation rate are not yet reported. Confidence calibration and a confidence threshold for low-confidence escalation are not yet evaluated.
+- **Risk rule depends on the classifier.** Misclassified risky messages bypass the rule. Planned mitigations: escalate when the combined probability of the risk intents is high, and add a keyword safety net.
+- **Large share escalates by policy.** About a fifth of the labeled data falls in the three risk intents, so policy escalation alone caps how many messages can be handled automatically.
+- **Prototype logging and security.** SQLite logging inside a container is not persistent unless a volume is mounted. Masking covers card-like and phone-like numbers only (not, for example, Aadhaar-style IDs, account numbers, emails or UPI IDs). There is no authentication or rate limiting.
+- **Single-turn only.** Each message is classified independently with no conversation state.
 
-## Repository Structure
+## Roadmap (Phase 2)
 
-```
-.
-├── data/
-│   ├── raw/                  # Original unformatted query data
-│   └── processed/            # train.csv, val.csv, test.csv
-├── notebooks/
-│   ├── phase1_baselines.ipynb               # TF-IDF and zero-shot LLM experiments
-│   └── phase2_transformer_finetuning.ipynb  # XLM-RoBERTa and MuRIL training
-└── results/
-    ├── latency_benchmark.csv  # Inference latency profiling
-    ├── phase1_results.csv     # Baseline metric logs
-    └── phase2_results.csv     # Transformer evaluation metrics
-```
-
-## Reproducing the Experiments
-
-1. Run `notebooks/phase1_baselines.ipynb` for the TF-IDF and zero-shot LLM results.
-2. Run `notebooks/phase2_transformer_finetuning.ipynb` (GPU recommended) for the XLM-RoBERTa and MuRIL results.
-3. Compare outputs against the files in `results/`.
+- A trained router that sends each message to the cheapest adequate tier: a small-model answer, a tool-calling agent on a mock bank API, or human handoff with a case summary.
+- A cost-vs-quality evaluation, with an LLM judge validated against human labels.
+- Redis caching, Postgres logging, Docker Compose, tracing and metrics, drift monitoring, and safety tests for prompt injection and unauthorized data access.
