@@ -1,0 +1,22 @@
+{
+  "tau": 0.65,
+  "risk_intents": [
+    "card_lost",
+    "compromised_card",
+    "unrecognized_payment"
+  ],
+  "classes": [
+    "cancel_transfer",
+    "card_arrival",
+    "card_not_working",
+    "compromised_card",
+    "declined_card_payment",
+    "extra_charge_on_statement",
+    "lost_or_stolen_card",
+    "other",
+    "pending_card_payment",
+    "top_up_failed",
+    "transfer_fee_charged",
+    "transfer_not_received_by_recipient"
+  ]
+}
