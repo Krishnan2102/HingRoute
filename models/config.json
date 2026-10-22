@@ -1,9 +1,9 @@
 {
   "tau": 0.65,
   "risk_intents": [
-    "card_lost",
+    "lost_or_stolen_card",
     "compromised_card",
-    "unrecognized_payment"
+    "extra_charge_on_statement"
   ],
   "classes": [
     "cancel_transfer",

@@ -17,6 +17,7 @@ data/raw/
 models/*
 !models/config.json
 !models/templates.json
+!models/tfidf_pipeline.pkl
 
 # Results & logs
 results/*.png
